@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'typograph';
+@import 'grid';
+
+@import 'header';
+@import 'footer';
+@import 'components';
+
+body {
+    background-color: #fff;
+}
