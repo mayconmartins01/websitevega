@@ -62,6 +62,40 @@
         background: $acc-950;
       }
   } 
+
+  .step {
+    width: 242.4px;
+    height: 124px;
+
+    .number-step {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      p {
+        background: $acc-500;
+        padding: 5px;
+        color: #fff;
+      }
+    }
+
+    .content-step{
+
+      img {
+        padding-top: 32px;
+        padding-bottom: 8px;
+      }
+
+      p {
+        max-width: 221px;
+        opacity: 0.8;
+        color: #fff;
+      }
+    }
+
+  }
+
+  
     
   
     
