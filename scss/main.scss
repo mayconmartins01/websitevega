@@ -1,11 +1,12 @@
 @import 'variables';
-@import 'mixins';
 @import 'reset';
-@import 'typograph';
 @import 'grid';
-@import 'header';
-@import 'footer';
+@import 'typograph';
+@import 'mixins';
 @import 'components';
+@import 'header';
+@import 'index';
+@import 'footer';
 
 body {
     background-color: #fff;

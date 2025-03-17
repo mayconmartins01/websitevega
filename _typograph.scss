@@ -6,21 +6,21 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 600;
     line-height: 120%; /* 57.6px */
     letter-spacing: -0.72px;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 4.0rem;
     font-weight: 600;
     line-height: 120%; /* 48px */
     letter-spacing: -0.6px;
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 600;
     line-height: 130%; /* 41.6px */
     letter-spacing: -0.48px;
@@ -31,14 +31,14 @@ h3.thin {
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 500;
     line-height: 130%; /* 31.2px */
     letter-spacing: -0.36px;
 }
 
 h4.bold {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: -0.3px;
 }
@@ -52,8 +52,7 @@ p, span {
 }
 
 .text-lg {
-    font-family: $font-primary;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: $line-height;
     
     &.medium { font-weight: 500; }
@@ -61,16 +60,14 @@ p, span {
 }
 
 .text-md {
-    font-family: $font-primary;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 130%; /* 23.4px */
     
     &.regular { font-weight: 400; letter-spacing: -0.27px; }
 }
 
 .text-base {
-    font-family: $font-primary;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: $line-height;
     
     &.semibold { font-weight: 600; }
@@ -79,8 +76,7 @@ p, span {
 }
 
 .text-sm {
-    font-family: $font-primary;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: $line-height;
     
     &.semibold { font-weight: 600; letter-spacing: -0.21px; }
@@ -89,16 +85,14 @@ p, span {
 }
 
 .text-xs {
-    font-family: $font-primary;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: $line-height;
     
     &.semibold { font-weight: 500; letter-spacing: -0.18px; }
 }
 
 .button-text {
-    font-family: $font-primary;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: $line-height;
     letter-spacing: -0.24px;

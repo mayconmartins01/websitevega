@@ -1,16 +1,13 @@
 // Bloco principal: header
 .header {
-    width: 1440px;
     background-color: #fff;
     padding: 16px 48px;
-    margin: 0 auto;
 
     // Elemento: header__container
     &__container {
         width: 100%;
         display: flex;
         justify-content: space-between;
-
     }
 
     // Elemento: header__nav-wrapper

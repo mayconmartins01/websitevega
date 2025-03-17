@@ -1,0 +1,390 @@
+// Configurações do container global (reset e estilo base já aplicados)
+  
+.s-hero-home {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+  
+    .wrapper-bg-home {
+      position: relative;
+      width: 100%;
+      height: 446px;
+      overflow: hidden;
+      
+      #bg-sh-hero {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      #line-header-left {
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        z-index: 1;
+      }
+  
+      .wrapper-text-protection {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 392px;
+        height: 66px;
+        padding: 12px 15px;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        z-index: 2;
+  
+        .text-sh-home-protection {
+          transition: opacity 0.5s ease;
+        }
+      }
+  
+      .wrapper-slider {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        gap: 24px;
+        z-index: 2;
+        flex-wrap: wrap;
+  
+        .slider {
+          cursor: pointer;
+          position: relative;
+          width: 306px;
+          padding-top: 12px;
+  
+          p {
+            padding-top: 6px;
+          }
+  
+          &::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #63d651;
+            z-index: 3;
+            transition: width 8s linear;
+          }
+  
+          &.active-progress::before {
+            width: 100%;
+          }
+  
+          &:not(.active-progress)::before {
+            width: 0;
+            transition: width 0s linear;
+          }
+  
+          .title,
+          .description {
+            transition: opacity 0.5s ease;
+          }
+        }
+  
+        #desc-rst {
+          width: 217px;
+        }
+        #desc-tlm {
+          width: 242px;
+        }
+        #desc-dts {
+          width: 306px;
+        }
+        #desc-alt {
+          width: 294px;
+        }
+      }
+}
+  
+    /* Seções abaixo do slider */
+    .wrapper-home {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 48px 0 32px;
+
+      h1 {
+        color: $neutral-900;
+      }
+    }
+  
+    .nav-page {
+      width: 357px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+  
+      &__caption {
+        display: flex;
+        padding: 0 0.4rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+  
+        p {
+          color: $neutral-600;
+          font-family: $font-primary;
+          font-size: 1.2rem;
+          font-weight: 500;
+          line-height: 130%;
+          letter-spacing: -0.18px;
+        }
+      }
+  
+      &__links {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        align-self: stretch;
+        justify-content: center;
+  
+        a {
+          color: $neutral-900;
+          font-family: $font-primary;
+          font-size: 1.4rem;
+          font-weight: 600;
+          line-height: 130%;
+          letter-spacing: -0.21px;
+        }
+      }
+    }
+  
+    .box-icon-down {
+      width: 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+  
+      img {
+        width: 100%;
+      }
+  }
+  
+    .about-solutions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }  
+  
+  .s-about-mission{
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  
+    h3 {
+      max-width: 112.7rem;
+      
+      }
+      .align-text{
+          display: flex;
+          justify-content: end;
+          padding-right: 189px;
+        p {
+          max-width: 36.2rem;
+          padding-top: 2.4rem;
+  
+      }
+    }
+  }
+  
+  
+  .s-hero-solutions {
+    margin-bottom: 120px;
+    position: relative;
+  
+    h2 {
+      padding-bottom: 32px;
+    }
+  
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+  
+        .solutions__nav {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 16px;
+
+        }
+  
+        #div-slt-tcm,
+        #div-slt-agr,
+        #div-slt-corp,
+        #div-slt-sp,
+        #div-slt-crg,
+        #div-slt-yl,
+        #div-slt-vv,
+        #div-slt-ind {
+            position: relative;
+        }
+  
+        #div-slt-tcm {
+            display: flex;
+            height: 36px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+  
+            a {
+                color: var($acc-700);
+            }
+        }
+  
+        #seletor-point {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+        }
+  
+        .box-bg-solutions {
+            width: 660px;
+            height: 623px;
+  
+            #bg-solutions {
+                width: 100%;
+                height: 100%;
+            }
+        }
+  
+        .solutions__text-wrapper {
+            width: 660px;
+            height: 617px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 17px;
+            padding-bottom: 16px;
+  
+            .solutions__content {
+                border-top: 1px solid $neutral-900;
+
+                p {
+                  color: $neutral-700;
+                }
+
+                h4 {
+                  color: $neutral-900;
+                }
+
+                .span-text {
+                    padding: 16px 0px 24px 0px;
+                }
+
+                .title-text-solutions {
+                  padding-bottom: 16px;
+                }
+
+                .button-text {
+                  padding-top: 32px;
+                }
+  
+                
+            }
+  
+            .solutions__highlights {
+                height: auto;
+  
+                .box-info {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    border-bottom: 1px solid $neutral-100;
+                    padding: 8px 0px 8px 0px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 8px;
+  
+                    #point-form {
+                        margin-right: 12px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                    }
+  
+                }
+            }
+        }
+    }
+  }
+  
+  // Bloco independente: test-buttons
+  .test-buttons {
+    width: 100%;
+    margin: 60px 0;
+  
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        gap: 16px;
+  
+        .btn {
+            display: inline-flex;
+            padding: 8px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            color: #fff;;
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+  
+            // Modificador: btn--sm
+            &--sm {
+                height: 34px;
+                width: 99px;
+                background: $acc-700;
+                font-size: 1.4rem;
+                letter-spacing: -0.21px;
+            }
+  
+            // Modificador: btn--sm-s4
+            &--sm-s4 {
+                height: 34px;
+                width: 99px;
+                background: var(--Color-Secondary-900, #1C5214);
+                font-size: 1.4rem;
+                letter-spacing: -0.21px;
+            }
+  
+            // Modificador: btn--default
+            &--default {
+                height: 40px;
+                width: 109px;
+                background: var(--Color-Secondary-700, #2E9C1D);
+                font-size: 1.6rem;
+                letter-spacing: -0.24px;
+            }
+  
+            // Modificador: btn--default-s3
+            &--default-s3 {
+                height: 40px;
+                width: 109px;
+                background: var(--Color-Secondary-900, #1C5214);
+                font-size: 1.6rem;
+                letter-spacing: -0.24px;
+            }
+        }
+    }
+  
+  }
+  
+  
