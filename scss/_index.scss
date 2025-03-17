@@ -299,6 +299,10 @@
   
             .solutions__highlights {
                 height: auto;
+
+                p {
+                  color: $neutral-700;
+                }
   
                 .box-info {
                     position: relative;

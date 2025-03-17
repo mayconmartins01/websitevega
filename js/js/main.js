@@ -275,7 +275,7 @@ const slides = [
         highlight1: "Central dedicada 24 horas por dia.",
         highlight2: "Alertas de movimentação não autorizada ou situações de risco.",
         highlight3: "Sistemas de localização para proteção estratégica.",
-        highlight4: ""
+        highlight4: "Sistema de iscas eletrônicas para proteção estratégica."
       },
       {
         id: "slt-yl",
