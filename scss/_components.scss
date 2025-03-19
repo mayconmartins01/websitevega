@@ -58,6 +58,7 @@
     background: $acc-700;
     color: #fff;
     font-family: $font-primary;
+    transition: background-color .3s ease;
     &:hover {
         background: $acc-950;
       }
@@ -93,6 +94,32 @@
       }
     }
 
+  }
+
+  .btn-default{
+    height: 40px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: $acc-700;
+    transition: background-color .3s ease;
+    &:hover {
+      background: $acc-950;
+    }
+
+    &.contato{
+      height: 40px;
+      padding: 8px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      background-color: #fff;
+      color: $neutral-900;
+      transition: background-color .3s ease;
+      &:hover{
+        background: $acc-950;
+        color: #fff;
+      }
+    }
   }
 
   
