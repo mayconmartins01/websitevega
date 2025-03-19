@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Website Vega</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -14,35 +17,40 @@
   <body>
     <header class="header">
       <div class="container">
-      <div class="header__container">
-        <div class="header__nav-wrapper">
-          <div class="header__logo">
-            <img src="./img/logo-header.svg" alt="Logo" />
+        <div class="header__container">
+          <div class="header__nav-wrapper">
+            <div class="header__logo">
+              <img src="./img/logo-header.svg" alt="Logo" />
+            </div>
+
+            <nav class="header__nav">
+              <a href="#projetos-especiais" class="header__nav-link"
+                >PROJETOS ESPECIAIS</a
+              >
+              <a href="#vega-view" class="header__nav-link">VEGA VIEW</a>
+              <a href="#vega-view" class="header__nav-link">CENTRAL 24H</a>
+            </nav>
           </div>
 
-          <nav class="header__nav">
-            <a href="#projetos-especiais" class="header__nav-link">PROJETOS ESPECIAIS</a>
-            <a href="#vega-view" class="header__nav-link">VEGA VIEW</a>
-            <a href="#vega-view" class="header__nav-link">CENTRAL 24H</a>
-          </nav>
-        </div>
+          <div class="header__menu">
+            <a
+              href="https://areavip.fullcontrol.com.br/vegasat"
+              class="header__menu-link"
+              target="_blank"
+              >EMISSÃO DE BOLETOS</a
+            >
+            <div class="header__login">
+              <img
+                src="./img/icon-login.svg"
+                alt="Login Icon"
+                class="header__login-icon"
+              />
+              <a href="#login" class="header__login-link">LOGIN</a>
+            </div>
 
-        <div class="header__menu">
-          <a href="https://areavip.fullcontrol.com.br/vegasat" class="header__menu-link" target="_blank"
-            >EMISSÃO DE BOLETOS</a
-          >
-          <div class="header__login">
-            <img
-              src="./img/icon-login.svg"
-              alt="Login Icon"
-              class="header__login-icon"
-            />
-            <a href="#login" class="header__login-link">LOGIN</a>
+            <button class="btn btn--sm">CONTATO</button>
           </div>
-
-          <button class="btn btn--sm">CONTATO</button>
         </div>
-      </div>
       </div>
     </header>
 
@@ -63,23 +71,36 @@
               <a href="#diferenciais" class="nav-page__link">DIFERENCIAIS</a>
             </nav>
             <div class="box-icon-down">
-              <img src="./img/icon-nav-down.svg" alt="Icon Nav Down" class="nav-page__icon" />
+              <img
+                src="./img/icon-nav-down.svg"
+                alt="Icon Nav Down"
+                class="nav-page__icon"
+              />
             </div>
           </div>
         </div>
-  
+
         <!-- Área do Slider com background definido -->
         <div class="wrapper-bg-home">
-          <img id="bg-sh-hero" src="./img/bg-s-hero-rst.webp" alt="img-background" />
-          <img id="line-header-left" src="./img/line-header-left.svg" alt="line-svg" />
-          
+          <img
+            id="bg-sh-hero"
+            src="./img/bg-s-hero-rst.webp"
+            alt="img-background"
+          />
+          <img
+            id="line-header-left"
+            src="./img/line-header-left.svg"
+            alt="line-svg"
+          />
+
           <!-- Texto sobre a imagem -->
           <div class="wrapper-text-protection">
             <p class="text-base medium">
-              Proteção avançada para veículo individual, frota, maquinário, Telecom, itens de alto valor e mais.
+              Proteção avançada para veículo individual, frota, maquinário,
+              Telecom, itens de alto valor e mais.
             </p>
           </div>
-  
+
           <!-- Slider com transições -->
           <div class="wrapper-slider">
             <div id="sld-rst" class="slider">
@@ -97,20 +118,22 @@
             <div id="sld-dts" class="slider">
               <span id="title-dts" class="text-xs semibold">DADOS</span>
               <p id="desc-dts" class="text-base">
-                Quilometragem, velocidade, horários de utilização e muito mais...
+                Quilometragem, velocidade, horários de utilização e muito
+                mais...
               </p>
             </div>
             <div id="sld-alt" class="slider">
-              <span id="title-alt" class="text-xs semibold">ALERTAS E NOTIFICAÇÕES</span>
+              <span id="title-alt" class="text-xs semibold"
+                >ALERTAS E NOTIFICAÇÕES</span
+              >
               <p id="desc-alt" class="text-base">
                 Alertas e notificações para o motorista e gestão em tempo real.
               </p>
             </div>
           </div>
         </div>
-  
-        <!-- Outras seções abaixo do slider -->
 
+        <!-- Outras seções abaixo do slider -->
       </div>
     </section>
 
@@ -118,11 +141,14 @@
       <div class="container">
         <div class="">
           <h3 class="about-mission-title">
-            Desde 2012, desenvolvemos soluções tecnológicas avançadas em rastreamento de ativos e telemetria para garantir segurança, eficiência operacional e decisões estratégicas baseadas em dados.
+            Desde 2012, desenvolvemos soluções tecnológicas avançadas em
+            rastreamento de ativos e telemetria para garantir segurança,
+            eficiência operacional e decisões estratégicas baseadas em dados.
           </h3>
           <div class="align-text">
             <p class="text-md">
-              Nossa trajetória é marcada por inovação, proporcionando confiança às empresas que nos escolhem como parceiros.
+              Nossa trajetória é marcada por inovação, proporcionando confiança
+              às empresas que nos escolhem como parceiros.
             </p>
           </div>
         </div>
@@ -138,7 +164,11 @@
         <div class="solutions__nav">
           <div id="div-slt-tcm">
             <a href="#slt-tcm" id="slt-tcm" class="text-md">Telecom</a>
-            <img id="seletor-point" src="./img/point-form-green.svg" alt="point-form" />
+            <img
+              id="seletor-point"
+              src="./img/point-form-green.svg"
+              alt="point-form"
+            />
           </div>
           <div id="div-slt-agr">
             <a href="#slt-agr" id="slt-agr" class="text-md">Agrícola</a>
@@ -163,61 +193,79 @@
           </div>
         </div>
         <div class="box-bg-solutions">
-          <img id="bg-solutions" src="./img/img-tab-telecom.webp" alt="image-telecom" />
+          <img
+            id="bg-solutions"
+            src="./img/img-tab-telecom.webp"
+            alt="image-telecom"
+          />
         </div>
-    
+
         <!-- Wrapper para posicionar os textos à direita -->
         <div class="solutions__text-wrapper">
           <div class="solutions__content">
             <p class="slt-title text-lg medium span-text">TELECOM</p>
-    
+
             <h4 id="slt-header-text" class="title-text-solutions">
-              Prevenção avançada contra roubos e furtos para equipamentos de telecomunicações
+              Prevenção avançada contra roubos e furtos para equipamentos de
+              telecomunicações
             </h4>
-    
+
             <p id="slt-content-title" class="text-base regular">
-              Garantia a segurança de seus equipamentos de alto valor de forma eficiente.
+              Garantia a segurança de seus equipamentos de alto valor de forma
+              eficiente.
             </p>
-            
+
             <p id="slt-content-desc" class="text-base regular">
-              Garanta a segurança de seus equipamentos de alto valor de forma eficiente. Nossa solução exclusiva Vega foi desenvolvida especificamente para proteger ativos como máquinas de fusão de fibra óptica, OTDRs, baterias estacionárias, entre outros.
+              Garanta a segurança de seus equipamentos de alto valor de forma
+              eficiente. Nossa solução exclusiva Vega foi desenvolvida
+              especificamente para proteger ativos como máquinas de fusão de
+              fibra óptica, OTDRs, baterias estacionárias, entre outros.
               <br /><br />
-              Com uma tecnologia de rastreamento discreta e inviolável, oferecemos monitoramento 24 horas e visibilidade precisa de seus ativos. Integramos redundância de sistemas de geolocalização, garantindo proteção total e gestão otimizada para suas operações em campo.
+              Com uma tecnologia de rastreamento discreta e inviolável,
+              oferecemos monitoramento 24 horas e visibilidade precisa de seus
+              ativos. Integramos redundância de sistemas de geolocalização,
+              garantindo proteção total e gestão otimizada para suas operações
+              em campo.
             </p>
             <!-- Container para o botão (será exibido apenas para slt-sp, slt-vv e slt-ind) -->
             <div id="slt-button-container" class="button-text"></div>
           </div>
-    
+
           <!-- Tópicos -->
           <div class="solutions__highlights">
             <div class="box-info bf1">
               <img src="./img/point-form.svg" alt="point-form" />
               <p id="slt-highlight-1" class="text-base regular">
-                Instalação discreta e inviolável, garantindo máxima segurança contra furtos e sabotagens
+                Instalação discreta e inviolável, garantindo máxima segurança
+                contra furtos e sabotagens
               </p>
             </div>
             <div class="box-info bf2">
               <img src="./img/point-form.svg" alt="point-form" />
               <p id="slt-highlight-2" class="text-base regular">
-                Sistema de geolocalização com múltiplas redundâncias: GPS, GPRS, LBS, RF e LoRa.
+                Sistema de geolocalização com múltiplas redundâncias: GPS, GPRS,
+                LBS, RF e LoRa.
               </p>
             </div>
             <div class="box-info bf3">
               <img src="./img/point-form.svg" alt="point-form" />
               <p id="slt-highlight-3" class="text-base regular">
-                Equipe de Pronta Resposta própria, com altos índices de recuperação em caso de roubo ou furto.
+                Equipe de Pronta Resposta própria, com altos índices de
+                recuperação em caso de roubo ou furto.
               </p>
             </div>
             <div class="box-info bf4">
               <img src="./img/point-form.svg" alt="point-form" />
               <p id="slt-highlight-4" class="text-base regular">
-                Equipe de Pronta Resposta própria, com altos índices de recuperação em caso de roubo ou furto.
+                Equipe de Pronta Resposta própria, com altos índices de
+                recuperação em caso de roubo ou furto.
               </p>
             </div>
             <div class="box-info bf5">
               <img src="./img/point-form.svg" alt="point-form" />
               <p id="slt-highlight-5" class="text-base regular">
-                Equipe de Pronta Resposta própria, com altos índices de recuperação em caso de roubo ou furto.
+                Equipe de Pronta Resposta própria, com altos índices de
+                recuperação em caso de roubo ou furto.
               </p>
             </div>
           </div>

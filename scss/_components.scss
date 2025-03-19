@@ -1,68 +1,75 @@
 .btn {
-    display: inline-flex;
-    padding: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  
-    &:hover {
-      opacity: 0.9;
-    }
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
   }
-  
-  .btn--sm {
-    height: 34px;
-    width: 99px;
-    background: $acc-700;
-    font-size: 1.4rem;
-    letter-spacing: -0.21px;
-  
-    &:hover {
-      background: $acc-800;
-    }
+}
+
+.btn--sm {
+  height: 34px;
+  width: 99px;
+  background: $acc-700;
+  font-size: 1.4rem;
+  letter-spacing: -0.21px;
+
+  &:hover {
+    background: $acc-800;
   }
-  
-  .btn--sm-s4 {
-    height: 34px;
-    width: 99px;
-    background: $acc-900;
-    font-size: 1.4rem;
-    letter-spacing: -0.21px;
-  
-    &:hover {
-      background: $acc-950;
-    }
+}
+
+.btn--sm-s4 {
+  height: 34px;
+  width: 99px;
+  background: $acc-900;
+  font-size: 1.4rem;
+  letter-spacing: -0.21px;
+
+  &:hover {
+    background: $acc-950;
   }
-  
-  .btn--default {
-    height: 40px;
-    width: 109px;
-    background: $acc-700;
-    font-size: 1.6rem;
-    letter-spacing: -0.24px;
-  
-    &:hover {
-      background: $acc-800;
-    }
+}
+
+.btn--default {
+  height: 40px;
+  width: 109px;
+  background: $acc-700;
+  font-size: 1.6rem;
+  letter-spacing: -0.24px;
+
+  &:hover {
+    background: $acc-800;
   }
-  
-  .btn--solutions{
-    height: 40px;
-    width: 123px;
-    background: $acc-900;
-    font-size: 1.6rem;
-    letter-spacing: -0.24px;
-    padding: 8px 16px;
-    background: $acc-700;
-    color: #fff;
-    font-family: $font-primary;
-    transition: background-color .3s ease;
-    &:hover {
-        background: $acc-950;
-      }
-  } 
+}
+
+.btn--solutions {
+  height: 40px;
+  width: 123px;
+  background: $acc-900;
+  font-size: 1.6rem;
+  letter-spacing: -0.24px;
+  padding: 8px 16px;
+  background: $acc-700;
+  color: #fff;
+  font-family: $font-primary;
+
+  &:hover {
+    background: $acc-950;
+  }
+}
+
+.wrapper-steps {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
 
   .step {
     width: 242.4px;
@@ -76,11 +83,11 @@
       p {
         background: $acc-500;
         padding: 5px;
-        color: #fff;
+        color: $neutral-25;
       }
     }
 
-    .content-step{
+    .content-step {
 
       img {
         padding-top: 32px;
@@ -89,8 +96,10 @@
 
       p {
         max-width: 221px;
-        opacity: 0.8;
-        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 130%;
+
       }
     }
 
@@ -120,7 +129,7 @@
         color: #fff;
       }
     }
-  }
+  }}
 
   
     
