@@ -1,4 +1,5 @@
 // Usado exclusivamente para página Projetos Especiais (projetos-especiais.html)
+/* SECTION HOME */
 .s-hero-home {
     .container {
         .wh-proj-esp {
@@ -66,14 +67,16 @@
                 }
             }
         }
+    }
+}
 
+/* SECTION SOBRE */
+.s-hero-sobre {
+    .container {
         .box-sobre-proj_esp {
-            width: 1116px;
-            margin: 0 auto;
-            margin-bottom: 90px;
-            padding: 120px 0;
+            width: 100%;
+            padding: 120px 114px 0;
             align-items: flex-end;
-            position: relative;
 
             h3 {
                 color: var(--Color-Neutral-900, #0D1521);
@@ -88,7 +91,6 @@
                     padding: 3px 174px 0 0;
                     margin-right: 18px;
                     border-top: 1px solid $neutral-900;
-
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
@@ -99,19 +101,21 @@
 
             .dcrpt-content-sobre {
                 width: 432px;
-                position: absolute;
-                bottom: 24px;
-                right: 114px;
+                max-width: 90%;
+                padding-top: 24px;
+                margin-left: 52.5%;
+                margin-bottom: 120px;
             }
         }
     }
-
 }
 
+/* SECTION CUSTOMERS */
 .sh-hero-customers {
     background: $pri-950;
     width: 100%;
-    height: 969px;
+    height: auto;
+    padding: 64px 0;
 
     .container {
         width: 100%;
@@ -122,7 +126,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            padding: 64px 0 40px 0;
+            padding: 0 0 40px 0;
 
             p {
                 font-size: 16px;
@@ -218,6 +222,7 @@
 
 }
 
+/* SECTION BUDGET */
 .s-hero-orc-budget {
     width: 100%;
     height: 126px;
@@ -269,6 +274,7 @@
 
 }
 
+/* SECTION SUPORT */
 .s-hero-support {
     width: 100%;
     height: auto;

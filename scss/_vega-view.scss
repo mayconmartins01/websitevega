@@ -1,7 +1,28 @@
 // Usado exclusivamente para página Vega View (vega-view.html)
+.s-hero-home {
+    .container {
+        .wrapper-bg-home {
+            .wrp-txt-vega-view {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: max-content;
+                height: max-content;
+                padding: 24px;
+
+                p {
+                    width: 438px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+}
+
 
 .s-hero-Car-Truck {
-    padding-bottom: 120px;
+    margin: 24px 0 120px;
 
     .container {
         .wrapper-Car-Truck {
@@ -132,6 +153,14 @@
 
         .wrap-truck {
             margin-top: 100px;
+        }
+    }
+}
+
+.s-hero-sobre {
+    .container {
+        .box-sobre-proj_esp {
+            padding: 120px 114px 0;
         }
     }
 }
