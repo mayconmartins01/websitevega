@@ -1,16 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <title>Central 24h Vega</title>
     <link rel="stylesheet" href="./css/main.css" />
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <div class="header__nav-wrapper">
+                    <div class="header__logo">
+                        <img src="./img/logo-header.svg" alt="Logo" />
+                    </div>
+                    <nav class="header__nav">
+                        <a href="#projetos-especiais" class="header__nav-link">PROJETOS ESPECIAIS</a>
+                        <a href="#vega-view" class="header__nav-link">VEGA VIEW</a>
+                        <a href="#vega-view" class="header__nav-link">CENTRAL 24H</a>
+                    </nav>
+                </div>
+
+                <div class="header__menu">
+                    <a href="https://areavip.fullcontrol.com.br/vegasat" class="header__menu-link"
+                        target="_blank">EMISSÃO DE
+                        BOLETOS</a>
+                    <div class="header__login">
+                        <img src="./img/icon-login.svg" alt="Login Icon" class="header__login-icon" />
+                        <a href="#login" class="header__login-link">LOGIN</a>
+                    </div>
+
+                    <button class="btn btn--sm">CONTATO</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="s-hero-home">
+        <!-- Container global já centralizado e com padding -->
+        <div class="container">
+            <!-- Cabeçalho com navegação -->
+            <div class="wrapper-home wh-proj-esp">
+                <div class="header-home">
+                    <h1>Central 24h</h1>
+                </div>
+                <div class="nav-page nav-proj-esp">
+                    <div class="nav-page__caption">
+                        <p class="nav-page__text">NAVEGUE NESSA PÁGINA</p>
+                    </div>
+                    <nav class="nav-page__links">
+                        <a href="#sobre-nos" class="nav-page__link">SOBRE</a>
+                        <a href="#diferenciais" class="nav-page__link">DIFERENCIAIS</a>
+                    </nav>
+                    <div class="box-icon-down">
+                        <img src="./img/icon-nav-down.svg" alt="Icon Nav Down" class="nav-page__icon" />
+                    </div>
+                </div>
+            </div>
+            <!-- Área do Slider com background definido -->
+            <div class="wrapper-bg-home wrp-bg_h-proj_esp">
+                <img id="bg-sh-hero" src="./img/bg-s-hero-central-24h.webp" alt="img-background" />
+                <!-- Texto sobre a imagem -->
+                <div class="wrapper-text-protection wrp-txt-proj-esp">
+                    <p class="text-base medium neutral-100">
+                        <span class="neutral-25">Central Própria de Atendimento 24 horas,</span> criada para oferecer o
+                        suporte que você precisa, quando
+                        e onde precisar.
+                    </p>
+                </div>
+
+                <div class="wrapper-slider box-text">
+                    <p class="neutral-100">
+                        Na Vega, não terceirizamos <br> a sua segurança
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="s-hero-sobre">
+        <div class="container">
+            <div class="box-sobre-proj_esp">
+                <h3>
+                    <span class="neutral-900">SOBRE </span>
+                    Com uma central de operações própria, exclusiva e em funcionamento ininterrupto 24/7, a Vega conta
+                    com uma equipe altamente qualificada que garante não apenas a segurança dos seus ativos, mas também
+                    a tranquilidade de contar com um parceiro que antecipa necessidades e entrega resultados
+                    consistentes.
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="s-hero-support">
+        <div class="container">
+            <!-- list suport group -->
+            <div class="wrapper-suport-list">
+
+                <div class="wrapper-content">
+                    <div class="header-customers header-suport">
+                        <p class="neutral-600">Central pópria de atendimento</p>
+                        <div class="txt-content neutral-900">
+                            <h2>CENTRAL 24 HORAS</h2>
+                        </div>
+                    </div>
+                    <div class="wrapper-item">
+                        <div class="suport-item">
+                            <div class="box-item">
+                                <img src="./img/icon-central-vega.svg" alt="icon-vega" />
+                                <h4 class="neutral-900">Central Exclusiva Vega</h4>
+                            </div>
+                            <p class="neutral-700 p-list1">
+                                Estrutura 100% própria. Equipe especializada com atendimento
+                                exclusivo aos clientes Vega.
+                            </p>
+                        </div>
+                        <div class="suport-item">
+                            <div class="box-item">
+                                <img src="./img/icon-24h.svg" alt="icon-24h" />
+                                <h4 class="neutral-900">Atendimento ininterrupto</h4>
+                            </div>
+                            <p class="neutral-700 p-list2">
+                                24 horas por dia, 7 dias por semana, garantindo que você nunca
+                                fique desamparado.
+                            </p>
+                        </div>
+                        <div class="suport-item">
+                            <div class="box-item">
+                                <img src="./img/icon-flash.svg" alt="icon-flash" />
+                                <h4 class="neutral-900">Ação imediata</h4>
+                            </div>
+                            <p class="neutral-700 p-list3">
+                                Resposta ágil e eficiente em qualquer situação de emergência.
+                            </p>
+                        </div>
+                        <div class="suport-item">
+                            <div class="box-item">
+                                <img src="./img/icon-presentation.svg" alt="icon-presentation" />
+                                <h4 class="neutral-900">Apoio eficaz em sinistros</h4>
+                            </div>
+                            <p class="neutral-700 p-list4">
+                                97% de sucesso na recuperação de ativos em casos de roubos ou
+                                furtos.
+                            </p>
+                        </div>
+                        <div class="suport-item sup-it5">
+                            <div class="box-item">
+                                <img src="./img/icon-phone.svg" alt="icon-phone" />
+                                <h4 class="neutral-900">Atendimento personalizado</h4>
+                            </div>
+                            <p class="neutral-700 p-list5">
+                                Soluções rápidas e humanizadas para atender às suas
+                                necessidades.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="suport-image">
+                    <img src="./img/img-suport.webp" alt="img-suport" />
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
