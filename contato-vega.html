@@ -1,16 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <title>Contato Vega</title>
     <link rel="stylesheet" href="./css/main.css" />
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <div class="header__nav-wrapper">
+                    <div class="header__logo">
+                        <img src="./img/logo-header.svg" alt="Logo" />
+                    </div>
+                    <nav class="header__nav">
+                        <a href="#projetos-especiais" class="header__nav-link">PROJETOS ESPECIAIS</a>
+                        <a href="#vega-view" class="header__nav-link">VEGA VIEW</a>
+                        <a href="#vega-view" class="header__nav-link">CENTRAL 24H</a>
+                    </nav>
+                </div>
+
+                <div class="header__menu">
+                    <a href="https://areavip.fullcontrol.com.br/vegasat" class="header__menu-link"
+                        target="_blank">EMISSÃO DE
+                        BOLETOS</a>
+                    <div class="header__login">
+                        <img src="./img/icon-login.svg" alt="Login Icon" class="header__login-icon" />
+                        <a href="#login" class="header__login-link">LOGIN</a>
+                    </div>
+
+                    <button class="btn btn--sm">CONTATO</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="s-hero-contact">
+        <div class="container">
+            <div class="wrapper-contact">
+                <div class="content-list-cntc">
+                    <h1>Contato</h1>
+
+                    <p class="text-base neutral-700 p-info-list">Desde 2012, a Vega garante proteção avançada para os
+                        mais diversos
+                        veículos, frotas e itens de
+                        alto
+                        valor.</p>
+
+                    <div class="wrapper-list">
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Chip Multioperadoras</p>
+                        </div>
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Tecnologia 4G</p>
+                        </div>
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Equipamentos homologados pela Anatel</p>
+                        </div>
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Rede CAN</p>
+                        </div>
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Tecnologias Avançadas</p>
+                        </div>
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Central 24h</p>
+                        </div>
+                        <div class="cntc-list">
+                            <img src="./img/icon-check.svg" alt="Check Icone">
+                            <p class="text-base neutral-700">Soluções personalizadas</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="info-contact">
+                    <div class="box-email ">
+                        <img src="./img/icon-email.png" alt="icon-email">
+                    </div>
+                    <p class="text-base neutral-700"> <span class="text-base neutral-900"> Entre em contato com a nossa
+                            equipe!</span> Se precisar de
+                        mais
+                        informações sobre nossos serviços, envie
+                        uma mensagem. Responderemos o mais breve possível.</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label class="text-base" for="name ">Seu nome</label>
+                        <input class="text-base neutral-400" type="text" id="name" placeholder="Nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-base" for="email">E-mail</label>
+                        <input class="text-base neutral-400" type="email" id="email" placeholder="Seu melhor e-mail"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-base" for="phone">Telefone</label>
+                        <input class="text-base neutral-400" type="tel" id="phone" placeholder="(00) 00000-0000"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-base" for="subject">Assunto da conversa?</label>
+                        <input class="text-base neutral-400" type="text" id="subject"
+                            placeholder="Qual o tema da conversa?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-base" for="message">Mensagem</label>
+                        <textarea class="text-base neutral-400 msn-area" placeholder="Digite aqui sua mensagem" rows="4"
+                            required></textarea>
+                    </div>
+
+                    <div class=" checkbox">
+                        <input class="text-base" type="checkbox" id="terms" required>
+                        <label class="text-base" for="terms">Eu li e concordo com os
+                            <a class="Terms-use neutral-900" href="#">Termos de uso</a> e
+                            <a class="privacy-police neutral-900" href="#">Políticas de privacidade</a>
+                        </label>
+                    </div>
+
+                    <button class="bt-submit-msn btn btn--default " type="submit">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
