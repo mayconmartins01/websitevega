@@ -1,189 +1,228 @@
-// Cores Primárias
+// _variables.scss
 
-$pri-25 : #F4F7FB;
-$pri-50 : #E8EFF6;
-$pri-100 : #E8EFF6;
-$pri-200 : #9FC1DA;
-$pri-300 : #6CA0C4;
-$pri-400 : #4984AE;
-$pri-500 : #376A92;
-$pri-600 : #2E5676;
-$pri-700 : #294963;
-$pri-800 : #273F53;
-$pri-900 : #131E29;
-$pri-950 : #0E161F;
+// Cores Primárias
+$pri-25: #F4F7FB;
+$pri-50: #E8EFF6;
+$pri-100: #E8EFF6;
+$pri-200: #9FC1DA;
+$pri-300: #6CA0C4;
+$pri-400: #4984AE;
+$pri-500: #376A92;
+$pri-600: #2E5676;
+$pri-700: #294963;
+$pri-800: #273F53;
+$pri-900: #131E29;
+$pri-950: #0E161F;
 
 // Accent
-
-$acc-50 : #F8FDF7;
-$acc-100 : #F4FCF1;
-$acc-200 : #E2FADE;
-$acc-300 : #C6F4BE;
-$acc-400 : #99E98C;
-$acc-500 : #63D651;
-$acc-600 : #3FBC2B;
-$acc-700 : #2E9C1D;
-$acc-800 : #287A1B;
-$acc-900 : #1C5214;
-$acc-950 : #0B2C07;
+$acc-50: #F8FDF7;
+$acc-100: #F4FCF1;
+$acc-200: #E2FADE;
+$acc-300: #C6F4BE;
+$acc-400: #99E98C;
+$acc-500: #63D651;
+$acc-600: #3FBC2B;
+$acc-700: #2E9C1D;
+$acc-800: #287A1B;
+$acc-900: #1C5214;
+$acc-950: #0B2C07;
 
 // Neutral
+$neutral-25: #F8F9FB;
+$neutral-50: #E8EAED;
+$neutral-100: #DCE0E5;
+$neutral-200: #C2C8D0;
+$neutral-300: #A3AAB5;
+$neutral-400: #818B99;
+$neutral-500: #616D7D;
+$neutral-600: #455160;
+$neutral-700: #2D3847;
+$neutral-800: #1A2433;
+$neutral-900: #0D1521;
+$neutral-950: #04080D;
 
-$neutral-25 : #F8F9FB;
-$neutral-50 : #E8EAED;
-$neutral-100 : #DCE0E5;
-$neutral-200 : #C2C8D0;
-$neutral-300 : #A3AAB5;
-$neutral-400 : #818B99;
-$neutral-500 : #616D7D;
-$neutral-600 : #455160;
-$neutral-700 : #2D3847;
-$neutral-800 : #1A2433;
-$neutral-900 : #0D1521;
-$neutral-950 : #04080D;
+// Spacings
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-sm: 12px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 40px;
+$spacing-xxxl: 48px;
+$spacing-huge: 60px;
+$spacing-mega: 80px;
+$spacing-giga: 120px;
+
+// Font Sizes
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+$font-size-xxxl: 40px;
+$font-size-huge: 48px;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-default: 130%;
+$line-height-heading: 120%;
+
+// Transitions
+$transition-default: 0.3s ease;
+
+// Z-Indices
+$z-index-low: 1;
+$z-index-medium: 2;
+$z-index-high: 3;
 
 // Classes para cores primárias
 .pri-25 {
-    color: $pri-25;
-  }
-  
-  .pri-50 {
-    color: $pri-50;
-  }
-  
-  .pri-100 {
-    color: $pri-100;
-  }
-  
-  .pri-200 {
-    color: $pri-200;
-  }
-  
-  .pri-300 {
-    color: $pri-300;
-  }
-  
-  .pri-400 {
-    color: $pri-400;
-  }
-  
-  .pri-500 {
-    color: $pri-500;
-  }
-  
-  .pri-600 {
-    color: $pri-600;
-  }
-  
-  .pri-700 {
-    color: $pri-700;
-  }
-  
-  .pri-800 {
-    color: $pri-800;
-  }
-  
-  .pri-900 {
-    color: $pri-900;
-  }
-  
-  .pri-950 {
-    color: $pri-950;
-  }
-  
-  
-  // Classes para cores de acento
-  .acc-50 {
-    color: $acc-50;
-  }
-  
-  .acc-100 {
-    color: $acc-100;
-  }
-  
-  .acc-200 {
-    color: $acc-200;
-  }
-  
-  .acc-300 {
-    color: $acc-300;
-  }
-  
-  .acc-400 {
-    color: $acc-400;
-  }
-  
-  .acc-500 {
-    color: $acc-500;
-  }
-  
-  .acc-600 {
-    color: $acc-600;
-  }
-  
-  .acc-700 {
-    color: $acc-700;
-  }
-  
-  .acc-800 {
-    color: $acc-800;
-  }
-  
-  .acc-900 {
-    color: $acc-900;
-  }
-  
-  .acc-950 {
-    color: $acc-950;
-  }
-  
-  
-  // Classes para cores neutras
-  .neutral-25 {
-    color: $neutral-25;
-  }
-  
-  .neutral-50 {
-    color: $neutral-50;
-  }
-  
-  .neutral-100 {
-    color: $neutral-100;
-  }
-  
-  .neutral-200 {
-    color: $neutral-200;
-  }
-  
-  .neutral-300 {
-    color: $neutral-300;
-  }
-  
-  .neutral-400 {
-    color: $neutral-400;
-  }
-  
-  .neutral-500 {
-    color: $neutral-500;
-  }
-  
-  .neutral-600 {
-    color: $neutral-600;
-  }
-  
-  .neutral-700 {
-    color: $neutral-700;
-  }
-  
-  .neutral-800 {
-    color: $neutral-800;
-  }
-  
-  .neutral-900 {
-    color: $neutral-900;
-  }
-  
-  .neutral-950 {
-    color: $neutral-950;
-  }
-  
+  color: $pri-25;
+}
+
+.pri-50 {
+  color: $pri-50;
+}
+
+.pri-100 {
+  color: $pri-100;
+}
+
+.pri-200 {
+  color: $pri-200;
+}
+
+.pri-300 {
+  color: $pri-300;
+}
+
+.pri-400 {
+  color: $pri-400;
+}
+
+.pri-500 {
+  color: $pri-500;
+}
+
+.pri-600 {
+  color: $pri-600;
+}
+
+.pri-700 {
+  color: $pri-700;
+}
+
+.pri-800 {
+  color: $pri-800;
+}
+
+.pri-900 {
+  color: $pri-900;
+}
+
+.pri-950 {
+  color: $pri-950;
+}
+
+// Classes para cores de acento
+.acc-50 {
+  color: $acc-50;
+}
+
+.acc-100 {
+  color: $acc-100;
+}
+
+.acc-200 {
+  color: $acc-200;
+}
+
+.acc-300 {
+  color: $acc-300;
+}
+
+.acc-400 {
+  color: $acc-400;
+}
+
+.acc-500 {
+  color: $acc-500;
+}
+
+.acc-600 {
+  color: $acc-600;
+}
+
+.acc-700 {
+  color: $acc-700;
+}
+
+.acc-800 {
+  color: $acc-800;
+}
+
+.acc-900 {
+  color: $acc-900;
+}
+
+.acc-950 {
+  color: $acc-950;
+}
+
+// Classes para cores neutras
+.neutral-25 {
+  color: $neutral-25;
+}
+
+.neutral-50 {
+  color: $neutral-50;
+}
+
+.neutral-100 {
+  color: $neutral-100;
+}
+
+.neutral-200 {
+  color: $neutral-200;
+}
+
+.neutral-300 {
+  color: $neutral-300;
+}
+
+.neutral-400 {
+  color: $neutral-400;
+}
+
+.neutral-500 {
+  color: $neutral-500;
+}
+
+.neutral-600 {
+  color: $neutral-600;
+}
+
+.neutral-700 {
+  color: $neutral-700;
+}
+
+.neutral-800 {
+  color: $neutral-800;
+}
+
+.neutral-900 {
+  color: $neutral-900;
+}
+
+.neutral-950 {
+  color: $neutral-950;
+}

@@ -1,84 +1,49 @@
-.btn {
-  display: inline-flex;
-  padding: 8px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  color: #fff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+// _components.scss
 
-  &:hover {
-    opacity: 0.9;
-  }
+.btn {
+  @include button-style($acc-700);
 }
 
 .btn--sm {
   height: 34px;
   width: 99px;
-  background: $acc-700;
-  font-size: 1.4rem;
-  letter-spacing: -0.21px;
-
-  &:hover {
-    background: $acc-800;
-  }
+  @include button-style($acc-700, $acc-800);
+  @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
 }
 
 .btn--sm-s4 {
   height: 34px;
   width: 99px;
-  background: $acc-900;
-  font-size: 1.4rem;
-  letter-spacing: -0.21px;
-
-  &:hover {
-    background: $acc-950;
-  }
+  @include button-style($acc-900, $acc-950);
+  @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
 }
 
 .btn--default {
   height: 40px;
   width: 109px;
-  background: $acc-700;
-  font-size: 1.6rem;
-  letter-spacing: -0.24px;
-
-  &:hover {
-    background: $acc-800;
-  }
+  @include button-style($acc-700, $acc-800);
+  @include typography($font-size-base, $font-weight-semibold, $line-height-default, -0.24px);
 }
 
 .btn--solutions {
   height: 40px;
   width: 123px;
-  background: $acc-900;
-  font-size: 1.6rem;
-  letter-spacing: -0.24px;
-  padding: 8px 16px;
-  background: $acc-700;
-  color: #fff;
-  font-family: $font-primary;
-
-  &:hover {
-    background: $acc-950;
-  }
+  @include button-style($acc-700, $acc-950);
+  @include typography($font-size-base, $font-weight-semibold, $line-height-default, -0.24px);
 }
 
 .wrapper-steps {
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 80px;
+  @include flex-space-between;
+  padding-bottom: $spacing-mega;
 
   .step {
     width: 242.4px;
     height: 124px;
 
     .number-step {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
+      @include flex-space-between;
 
       p {
         background: $acc-500;
@@ -88,108 +53,145 @@
     }
 
     .content-step {
-
       img {
-        padding-top: 32px;
-        padding-bottom: 8px;
+        padding-top: $spacing-xl;
+        padding-bottom: $spacing-xs;
       }
 
       p {
         max-width: 221px;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 130%;
-
+        @include typography($font-size-lg, $font-weight-medium, $line-height-default);
       }
     }
+  }
+}
 
-  }}
+.btn--default2 {
+  width: max-content;
+  height: max-content;
+  @include button-style($acc-700, $acc-950);
 
-  .btn--default2{
-    height: 40px;
-    padding: 8px 16px;
-    color: #fff;
-    background-color: $acc-700;
-    transition: background-color .3s ease;
+  &.contato {
+    background-color: $neutral-25;
+    color: $neutral-900;
+
     &:hover {
       background: $acc-950;
+      color: $neutral-25;
     }
-    &.contato{
-      width: 203px;
-      height: 40px;
-      padding: 8px 16px;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      background-color: #fff;
-      color: $neutral-900;
-      transition: background-color .3s ease;
-      &:hover{
-        background: $acc-950;
-        color: #fff;
+  }
+}
+
+.f-footer {
+  background-color: $pri-950;
+  padding-top: 54px;
+  padding-bottom: $spacing-xl;
+
+  .container {
+    .content-footer {
+      .imgs-footer {
+        @include flex-space-between;
+        align-items: flex-start;
+
+        .logo-footer {
+          padding: 6px 0 0 0;
+        }
+      }
+
+      .social {
+        @include flex-column;
+        @include spacing($padding: $spacing-md 0 0 0, $gap: $spacing-md);
+      }
+
+      .text-footer {
+        p {
+          color: $neutral-25;
+          max-width: 223px;
+          padding-top: $spacing-lg;
+        }
+      }
+
+      .text-contatos {
+        @include flex-space-between;
+        padding-top: $spacing-giga;
+        padding-bottom: $spacing-md;
+        border-bottom: 2px solid $neutral-700;
+
+        .tel {
+          @include flex-column;
+          @include spacing($gap: $spacing-xs);
+
+          a {
+            color: $neutral-25;
+          }
+        }
+
+        .text-email {
+          a {
+            color: $neutral-25;
+          }
+        }
+      }
+
+      .assinatura {
+        @include flex-space-between;
+        padding-top: $spacing-md;
+
+        .text-direitos {
+          color: $neutral-25;
+        }
+
+        .text-assinatura {
+          a {
+            color: $neutral-25;
+          }
+        }
       }
     }
   }
+}
 
-  .f-footer{
-    background-color: $pri-950;
-    padding-top: 54px;
-    padding-bottom: 32px;
-    .container{
-      .content-footer{
-        .imgs-footer{
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-            .logo-footer{
-              padding: 6px 0px 0px 0px;
-            }
-          
-        }
-        .social{
-          display: flex;
-          gap: 16px;
-          padding-top: 18px;
-        }
-        .text-footer{
-          p {
-            color: #fff;
-            max-width: 223px;
-            padding-top: 24px;
-          }
-        }
-        .text-contatos{
-          display: flex;
-          justify-content: space-between;
-          padding-top: 120px;
-          padding-bottom: 16px;
-          border-bottom: 2px solid $neutral-700;
-          .tel{
-            display: flex;
-            gap: 8px;
-            a{color: #fff;}
-          }
-          .text-email{
-            a{color: #fff;}
-          }
-        }
-        .assinatura{
-          display: flex;
-          justify-content: space-between;
-          padding-top: 16px;
-          .text-direitos{
-            color: #fff;
-          }
-          .text-assinatura{
-            a{color: #fff;}
-        }
+.test-buttons {
+  width: 100%;
+  margin: $spacing-huge 0;
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: $spacing-md;
+
+    .btn {
+      @include button-style($acc-700);
+      @include typography($font-size-base, $font-weight-semibold, $line-height-default);
+
+      &--sm {
+        height: 34px;
+        width: 99px;
+        @include button-style($acc-700);
+        @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
+      }
+
+      &--sm-s4 {
+        height: 34px;
+        width: 99px;
+        @include button-style($acc-900);
+        @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
+      }
+
+      &--default {
+        height: 40px;
+        width: 109px;
+        @include button-style($acc-700);
+        @include typography($font-size-base, $font-weight-semibold, $line-height-default, -0.24px);
+      }
+
+      &--default-s3 {
+        height: 40px;
+        width: 109px;
+        @include button-style($acc-900);
+        @include typography($font-size-base, $font-weight-semibold, $line-height-default, -0.24px);
       }
     }
   }
-  }
-
-  
-    
-  
-    
-  
+}

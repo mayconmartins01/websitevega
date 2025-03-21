@@ -1,4 +1,5 @@
-// Usado exclusivamente para página Vega View (vega-view.html)
+// _vega-view.scss
+
 .s-hero-home {
     .container {
         .wrapper-bg-home {
@@ -9,56 +10,48 @@
                 left: 0;
                 width: max-content;
                 height: max-content;
-                padding: 24px;
+                padding: $spacing-lg;
 
                 p {
                     width: 438px;
-                    font-size: 20px;
+                    @include typography($font-size-lg);
                 }
             }
         }
     }
-
 }
 
-
 .s-hero-Car-Truck {
-    margin: 24px 0 120px;
+    margin: $spacing-lg 0 $spacing-giga;
 
     .container {
         .wrapper-Car-Truck {
             width: 100%;
             height: 352px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex-space-between;
             padding: 0 115px;
 
             .wrapper-ilustration {
                 width: 432px;
                 height: 352px;
-                background: #E8EAED;
+                background: $neutral-50;
 
                 .btn-content {
                     width: 432px;
-                    display: flex;
-                    padding: 4px;
-                    align-items: flex-start;
-                    gap: 8px;
+                    @include flex-column;
+                    @include spacing($padding: $spacing-xxs, $gap: $spacing-xs);
                     align-self: stretch;
 
                     .btn-select {
-                        display: flex;
-                        padding: 4px 8px;
-                        justify-content: center;
-                        align-items: center;
+                        @include flex-center;
+                        padding: $spacing-xxs $spacing-xs;
                         gap: 10px;
                         flex: 1 0 0;
-                        background: #E8EAED;
+                        background: $neutral-50;
                     }
 
                     .bt-car {
-                        background: #FFF;
+                        background: $neutral-25;
                         box-shadow: -6px -6px 16px 0px rgba(255, 255, 255, 0.60), 4px 4px 10px 0px rgba(0, 0, 0, 0.03);
                     }
                 }
@@ -77,75 +70,50 @@
             .wrapper-info {
                 width: 456px;
                 height: 352px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
+                @include flex-column;
+                @include flex-space-between;
 
                 .header-info {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
+                    @include flex-column;
+                    @include spacing($gap: $spacing-xs);
 
                     .title-info {
-                        font-size: 18px;
-                        font-weight: 500;
-                        line-height: 130%;
-                        letter-spacing: -0.27px;
+                        @include typography($font-size-md, $font-weight-medium, $line-height-default, -0.27px);
                     }
 
                     .description-info {
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 130%;
-                        letter-spacing: -0.27px;
+                        @include typography($font-size-md, $font-weight-regular, $line-height-default, -0.27px);
                     }
                 }
 
                 .wrapper-topic {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
+                    @include flex-column;
+                    @include spacing($gap: $spacing-sm);
 
                     .topic {
-                        display: flex;
-                        align-items: center;
-                        gap: 12px;
-
-
+                        @include flex-center;
+                        gap: $spacing-sm;
 
                         p {
-                            font-size: 18px;
-                            font-weight: 400;
-                            line-height: 130%;
-                            letter-spacing: -0.27px;
+                            @include typography($font-size-md, $font-weight-regular, $line-height-default, -0.27px);
                         }
 
                         .numer-topic {
                             width: 20px;
                             height: 20px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @include flex-center;
                             background: $acc-500;
 
                             p {
-                                font-size: 14px;
-                                font-weight: 500;
-                                line-height: 130%;
-                                letter-spacing: -0.21px;
+                                @include typography($font-size-sm, $font-weight-medium, $line-height-default, -0.21px);
                             }
-
                         }
 
                         .exclusive-truck {
-                            display: flex;
+                            @include flex-center;
                             padding: 2px 6px;
-                            justify-content: center;
-                            align-items: center;
                             gap: 10px;
-                            background: linear-gradient(96deg, #B7E9AF -0.85%, #63D651 15.78%, #A3F497 23.53%, #63D651 37.61%, #37B124 67.57%, #63D651 73.75%, #63D651 107.4%);
-
+                            background: linear-gradient(96deg, #B7E9AF -0.85%, $acc-500 15.78%, #A3F497 23.53%, $acc-500 37.61%, #37B124 67.57%, $acc-500 73.75%, $acc-500 107.4%);
                         }
                     }
                 }
@@ -161,7 +129,7 @@
 .s-hero-sobre {
     .container {
         .box-sobre-proj_esp {
-            padding: 120px 114px 0;
+            padding: $spacing-giga 114px 0;
         }
     }
 }

@@ -1,79 +1,51 @@
-// Bloco principal: header
-.header {
-    background-color: #fff;
-    padding: 16px 48px;
+// _header.scss
 
-    // Elemento: header__container
+.header {
+    background-color: $neutral-25;
+    padding: $spacing-md $spacing-xxxl;
+
     &__container {
+        @include flex-space-between;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
     }
 
-    // Elemento: header__nav-wrapper
     &__nav-wrapper {
         width: max-content;
-        display: flex;
-        align-items: center;
+        @include flex-center;
     }
 
-    // Elemento: header__nav
     &__nav {
-        display: flex;
-        margin-left: 40px;
-        gap: 40px;
-        align-items: center;
+        @include flex-center;
+        margin-left: $spacing-xxl;
+        gap: $spacing-xxl;
     }
 
-    // Elemento: header__menu
     &__menu {
-        display: flex;
-        align-items: center;
-        gap: 32px;
+        @include flex-center;
+        gap: $spacing-xl;
 
         .btn {
-            display: inline-flex;
-            padding: 8px 16px;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            color: var(--Color-Neutral-00, #FFF);
-            font-family: Inter;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 130%;
+            @include button-style($acc-700);
+            @include typography($font-size-sm, $font-weight-semibold, $line-height-default);
 
-            // Modificador: btn--sm
             &--sm {
                 height: 34px;
                 width: 99px;
-                background: var(--Color-Secondary-700, #2E9C1D);
-                font-size: 1.4rem;
-                letter-spacing: -0.21px;
+                @include button-style($acc-700);
+                @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
             }
         }
     }
 
-    // Elemento: header__login
     &__login {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        @include flex-center;
+        gap: $spacing-xs;
     }
 
-    // Elemento: header__nav-link e header__menu-link
     &__nav-link,
     &__menu-link,
     &__login-link {
-        color: var(--Color-Neutral-900, #0D1521);
-        font-family: Inter;
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 130%;
-        letter-spacing: -0.21px;
+        color: $neutral-900;
+        @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
     }
-
-    // Modificador: btn--sm
-
 }

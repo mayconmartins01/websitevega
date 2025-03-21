@@ -1,4 +1,5 @@
-// Usado exclusivamente para página Contato Vega (contato-vega.html)
+// _contato.scss
+
 .s-hero-contact {
     width: 100%;
     height: 953px;
@@ -11,54 +12,46 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
 
         .wrapper-contact {
             width: 490px;
             height: 685px;
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
             justify-content: space-between;
             padding: 24.5px 58px 31.5px 40px;
 
             .content-list-cntc {
                 width: max-content;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
+                @include flex-column;
+                @include spacing($gap: $spacing-md);
 
                 .p-info-list {
                     width: 406px;
                 }
 
                 .wrapper-list {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
+                    @include flex-column;
+                    @include spacing($gap: $spacing-sm);
                 }
 
                 .cntc-list {
                     width: 100%;
-                    display: flex;
-                    gap: 13px;
+                    @include flex-column;
+                    @include spacing($gap: 13px);
                 }
             }
 
             .info-contact {
                 width: 303px;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
+                @include flex-column;
+                @include spacing($gap: $spacing-md);
 
                 .box-email {
-                    width: 24px;
-                    height: 24px;
+                    width: $spacing-lg;
+                    height: $spacing-lg;
                     background: $neutral-900;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include flex-center;
                 }
             }
         }
@@ -66,23 +59,20 @@
         .contact-form {
             width: 640px;
             height: 683px;
-            display: flex;
-            flex-direction: column;
-            padding: 32px 40px;
+            @include flex-column;
+            padding: $spacing-xl 40px;
 
             form {
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
+                @include flex-column;
+                @include spacing($gap: $spacing-lg);
 
                 .form-group {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
+                    @include flex-column;
+                    @include spacing($gap: $spacing-xs);
 
                     input {
                         display: flex;
-                        padding: 10px 16px 9px;
+                        padding: 10px $spacing-md 9px;
                         align-items: center;
                         align-self: stretch;
                         border: 1px solid $neutral-200;
@@ -91,18 +81,18 @@
                     .msn-area {
                         width: 559px !important;
                         height: 120px !important;
-                        padding: 10px 16px 89px;
+                        padding: 10px $spacing-md 89px;
                     }
                 }
 
                 .checkbox {
-                    display: flex;
-                    gap: 13px;
+                    @include flex-column;
+                    @include spacing($gap: 13px);
 
                     .Terms-use,
                     .privacy-police {
                         text-decoration: underline;
-                        font-weight: 500;
+                        font-weight: $font-weight-medium;
                     }
                 }
 
@@ -110,8 +100,6 @@
                     width: max-content;
                 }
             }
-
-
         }
     }
 }
