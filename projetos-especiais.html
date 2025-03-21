@@ -21,12 +21,14 @@
       <div class="header__container">
         <div class="header__nav-wrapper">
           <div class="header__logo">
-            <img src="./img/logo-header.svg" alt="Logo" />
+            <a href="./index.html">
+              <img src="./img/logo-header.svg" alt="Logo" />
+            </a>
           </div>
           <nav class="header__nav">
-            <a href="#projetos-especiais" class="header__nav-link">PROJETOS ESPECIAIS</a>
-            <a href="#vega-view" class="header__nav-link">VEGA VIEW</a>
-            <a href="#vega-view" class="header__nav-link">CENTRAL 24H</a>
+            <a href="./projetos-especiais.html" class="header__nav-link">PROJETOS ESPECIAIS</a>
+            <a href="./vega-view.html" class="header__nav-link">VEGA VIEW</a>
+            <a href="./central24h.html" class="header__nav-link">CENTRAL 24H</a>
           </nav>
         </div>
 
@@ -38,7 +40,7 @@
             <a href="#login" class="header__login-link">LOGIN</a>
           </div>
 
-          <button class="btn btn--sm">CONTATO</button>
+          <a href="./contato-vega.html" class="btn btn--sm">CONTATO</a>
         </div>
       </div>
     </div>
@@ -64,10 +66,10 @@
             <p class="nav-page__text">NAVEGUE NESSA PÁGINA</p>
           </div>
           <nav class="nav-page__links">
-            <a href="#sobre-nos" class="nav-page__link">SOBRE</a>
+            <a href="#sobre" class="nav-page__link">SOBRE</a>
             <a href="#como-fazemos" class="nav-page__link">COMO FAZEMOS</a>
             <a href="#diferenciais" class="nav-page__link">DIFERENCIAIS</a>
-            <a href="#central-24h" class="nav-page__link">CENTRAL 24H</a>
+            <a href="#central24h" class="nav-page__link">CENTRAL 24H</a>
           </nav>
           <div class="box-icon-down">
             <img src="./img/icon-nav-down.svg" alt="Icon Nav Down" class="nav-page__icon" />
@@ -97,7 +99,7 @@
   </section>
 
   <!-- SOBRE -->
-  <section class="s-hero-sobre">
+  <section id="sobre" class="s-hero-sobre">
     <div class="container">
       <div class="box-sobre-proj_esp">
         <h3>
@@ -117,7 +119,7 @@
   </section>
 
   <!-- CUSTOMERS -->
-  <section class="sh-hero-customers">
+  <section id="como-fazemos" class="sh-hero-customers">
     <div class="container">
       <div class="header-customers">
         <p class="neutral-100">Como fazemos</p>
@@ -206,12 +208,12 @@
         </div>
       </div>
       <div class="line-ctr-ctm">
-        <img src="./img/line-center-custom.svg" alt="line-custom" />
+        <img id="diferenciais" src="./img/line-center-custom.svg" alt="line-custom" />
       </div>
       <div class="header-customers header-proj-down">
-        <p class="neutral-100">Como fazemos</p>
+        <p class="neutral-100">Diferenciais Projetos Especiais Vega</p>
         <div class="txt-content neutral-200">
-          <h2>PROJETOS 100% CUSTOMIZADOS</h2>
+          <h2>POR QUE PROJETOS ESPECIAIS?</h2>
         </div>
       </div>
       <!-- Cards-proj -->
@@ -289,7 +291,7 @@
   </section>
 
   <!-- SUPORT -->
-  <section class="s-hero-support">
+  <section id="central24h" class="s-hero-support">
     <div class="container">
       <!-- list suport group -->
       <div class="wrapper-suport-list">
@@ -359,6 +361,53 @@
       </div>
     </div>
   </section>
-</body>
 
+  <footer class="f-footer">
+    <div class="container">
+      <div class="content-footer">
+        <div class="imgs-footer">
+          <a href="./index.html">
+            <img class="logo-footer" src="./img/logo-footer.svg" alt="">
+        </a>
+          <img src="./img/line-star-footer.svg" alt="">
+        </div>
+        <div class="social">
+          <a href="">
+            <img src="./img/logo-facebook.svg" alt="Facebook">
+          </a>
+          <a href="">
+            <img src="./img/logo-instagram.svg" alt="Instagram">
+          </a>
+          <a href="">
+            <img src="./img/logo-linkedin.svg" alt="Linkedin">
+          </a>
+        </div>
+        <div class="text-footer">
+          <p class="text-base">Na Vega, não terceirizamos sua segurança.</p>
+        </div>
+        <div class="text-contatos">
+          <div class="tel text-sm regular">
+            <a href="tel:+551421050033">(14) 2105-0033</a>
+            <img src="./img/point.svg" alt="Point">
+            <a href="tel:+551433330033">(14) 3333-0033</a>
+          </div>
+          <div class="text-email text-sm regular">
+            <a href="mailto:contato@vegasat.com.br">contato@vegasat.com.br</a>
+          </div>
+        </div>
+        <div class="assinatura">
+          <div class="text-sm regular text-direitos">
+            <p>&copy; VEGA - <span id="ano"></span> . TODOS OS DIREITOS RESERVADOS</p>
+          </div>
+          <div class="text-assinatura">
+            <a class="text-sm regular" href="https://auclandesign.com">
+              Feito com ♥ Auclan Design
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
