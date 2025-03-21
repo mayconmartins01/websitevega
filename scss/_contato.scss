@@ -37,7 +37,7 @@
 
                 .cntc-list {
                     width: 100%;
-                    @include flex-column;
+                    @include flex-row;
                     @include spacing($gap: 13px);
                 }
             }
@@ -64,7 +64,7 @@
 
             form {
                 @include flex-column;
-                @include spacing($gap: $spacing-lg);
+                @include spacing($gap: $spacing-gap-form);
 
                 .form-group {
                     @include flex-column;
@@ -86,7 +86,7 @@
                 }
 
                 .checkbox {
-                    @include flex-column;
+                    @include flex-row;
                     @include spacing($gap: 13px);
 
                     .Terms-use,

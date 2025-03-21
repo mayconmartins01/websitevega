@@ -99,7 +99,7 @@
       }
 
       .social {
-        @include flex-column;
+        @include flex-row;
         @include spacing($padding: $spacing-md 0 0 0, $gap: $spacing-md);
       }
 
@@ -118,7 +118,7 @@
         border-bottom: 2px solid $neutral-700;
 
         .tel {
-          @include flex-column;
+          @include flex-row;
           @include spacing($gap: $spacing-xs);
 
           a {

@@ -229,7 +229,6 @@
 .s-hero-support {
     width: 100%;
     height: auto;
-    padding: 120px 0;
 
     .container {
         width: 100%;
@@ -256,7 +255,7 @@
             .wrapper-content {
                 height: 100%;
                 @include flex-column;
-                @include flex-space-between;
+                @include flex-space-between-start;
 
                 .wrapper-item {
                     width: 774px;
@@ -275,7 +274,7 @@
                         .box-item {
                             width: 375px;
                             height: auto;
-                            @include flex-center;
+                            @include flex-start;
                             gap: $spacing-lg;
 
                             h4 {
