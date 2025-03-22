@@ -24,14 +24,12 @@
               <img src="./img/logo-header.svg" alt="Logo" />
             </a>
           </div>
-
           <nav class="header__nav">
             <a href="./projetos-especiais.html" class="header__nav-link">PROJETOS ESPECIAIS</a>
             <a href="./vega-view.html" class="header__nav-link">VEGA VIEW</a>
             <a href="./central24h.html" class="header__nav-link">CENTRAL 24H</a>
           </nav>
         </div>
-
         <div class="header__menu">
           <a href="https://areavip.fullcontrol.com.br/vegasat" class="header__menu-link" target="_blank">EMISSÃO DE
             BOLETOS</a>
@@ -39,9 +37,34 @@
             <img src="./img/icon-login.svg" alt="Login Icon" class="header__login-icon" />
             <a href="#login" class="header__login-link">LOGIN</a>
           </div>
-
           <a href="./contato-vega.html" class="btn btn--sm">CONTATO</a>
         </div>
+      </div>
+      <!-- Menu Mobile -->
+      <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu__header">
+          <div class="mobile-menu__logo">
+            <a href="./index.html">
+              <img id="mobile-logo" src="./img/logo-header.svg" alt="Logo" />
+            </a>
+          </div>
+          <img id="menu-toggle" src="./img/menu-mobile.svg" alt="Menu Toggle Icon" class="menu-icon" />
+        </div>
+        <nav class="mobile-menu__nav">
+
+          <a href="./projetos-especiais.html" class="mobile-menu__nav-link">PROJETOS ESPECIAIS</a>
+          <a href="./vega-view.html" class="mobile-menu__nav-link">VEGA VIEW</a>
+          <a href="./central24h.html" class="mobile-menu__nav-link">CENTRAL 24H</a>
+          <a href="https://areavip.fullcontrol.com.br/vegasat" class="mobile-menu__nav-link" target="_blank">EMISSÃO
+            DE
+            BOLETOS</a>
+          <a href="#login" class="mobile-menu__nav-link">
+            <img src="./img/icon-login.svg" alt="Login Icon" class="mobile-menu__login-icon" />
+            LOGIN
+          </a>
+
+          <a href="./contato-vega.html" class="mobile-menu__nav-link mobile-menu__nav-btn">CONTATO</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -522,4 +545,5 @@
 
 </html>
 <script src="./js/js/main.js"></script>
+<script src="./js/js/menu-mobile.js"></script>
 <script>document.getElementById("ano").textContent = new Date().getFullYear();</script>

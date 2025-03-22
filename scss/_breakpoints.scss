@@ -1,0 +1,176 @@
+// _breakpoints.scss
+
+$breakpoint-LG1200: 1200px;
+$breakpoint-LG1024: 1024px;
+$breakpoint-LG_768: 768px;
+$breakpoint-LG_560: 560px;
+
+// Acima de 1200px: Desktop, menu mobile escondido
+@media (min-width: $breakpoint-LG1200) {
+    .header {
+
+        &__nav,
+        &__menu {
+            display: flex;
+        }
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+}
+
+// 1024px a 1200px: Header mantém nav, menu mobile mostra apenas header__menu
+@media (min-width: $breakpoint-LG1024) and (max-width: $breakpoint-LG1200) {
+    .header {
+        padding: $spacing-md;
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__nav-wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__nav {
+            display: flex;
+        }
+    }
+
+    .header:not(.is-open) {
+        #mobile-menu {
+            display: block;
+            background: transparent;
+            box-shadow: none;
+            width: 30px;
+            height: 20px;
+
+            .mobile-menu__header {
+                background: transparent;
+            }
+
+            .mobile-menu__nav {
+                display: none;
+            }
+        }
+    }
+
+    .header.is-open {
+        #mobile-menu {
+            display: flex;
+            background: $neutral-25;
+            width: 412px;
+
+            .mobile-menu__nav {
+                display: flex;
+            }
+        }
+    }
+
+    #mobile-menu .mobile-menu__nav .mobile-menu__nav-link:nth-child(-n + 3) {
+        display: none;
+    }
+}
+
+// Abaixo de 1024px: Menu mobile mostra header__nav e header__menu
+@media (max-width: $breakpoint-LG1024) {
+    .header {
+        padding: $spacing-md;
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__nav-wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__menu,
+        &__nav {
+            display: none;
+        }
+    }
+
+    .header:not(.is-open) {
+        #mobile-menu {
+            display: block;
+            background: transparent;
+            box-shadow: none;
+            width: 30px;
+            height: 20px;
+
+            .mobile-menu__header {
+                background: transparent;
+            }
+
+            .mobile-menu__nav {
+                display: none;
+            }
+        }
+    }
+
+    .header.is-open {
+        #mobile-menu {
+            display: flex;
+            background: $neutral-25;
+            width: 412px;
+
+            .mobile-menu__nav {
+                display: flex;
+            }
+
+            .mobile-menu__logo {
+                display: block;
+            }
+        }
+    }
+}
+
+// Abaixo de 768px: Menu mobile como overlay (100% width), oculta apenas o conteúdo do header principal
+@media (max-width: $breakpoint-LG_768) {
+    .header.is-open {
+        .header__container {
+            display: none; // Oculta apenas o conteúdo do header principal (logo, nav, etc.)
+        }
+
+        #mobile-menu {
+            display: flex; // Garante que o menu mobile permaneça visível
+            width: 100vh;
+            max-width: 100%;
+            z-index: 3;
+            justify-content: center;
+
+            .mobile-menu__nav {
+                display: block;
+                width: 100vh;
+                max-width: 100%;
+                padding: 16px;
+                position: absolute;
+                top: 0;
+                padding-top: 80px;
+                gap: 24px;
+            }
+
+            .mobile-menu__nav-link {
+                padding: 5%;
+            }
+
+        }
+    }
+}
+
+// Abaixo de 560px: Ajuste de padding no header
+@media (max-width: $breakpoint-LG_560) {
+    .header {
+        padding: $spacing-sm;
+    }
+}
