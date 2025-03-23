@@ -65,6 +65,10 @@
             max-width: 100%;
         }
     }
+
+    @include responsivo('laptop'){
+        // Aqui voce inclui seu responsivo laptop, ou breakpoint que escolher
+    }
 }
 
 // Estilos do Ícone de Toggle
