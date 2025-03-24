@@ -29,6 +29,8 @@
             width: 100%;
             height: 352px;
             @include flex-space-between;
+
+
             padding: 0 115px;
 
             .wrapper-ilustration {
@@ -38,7 +40,7 @@
 
                 .btn-content {
                     width: 432px;
-                    @include flex-column;
+                    @include flex-row;
                     @include spacing($padding: $spacing-xxs, $gap: $spacing-xs);
                     align-self: stretch;
 
@@ -71,7 +73,7 @@
                 width: 456px;
                 height: 352px;
                 @include flex-column;
-                @include flex-space-between;
+                @include flex-space-between-start;
 
                 .header-info {
                     @include flex-column;
