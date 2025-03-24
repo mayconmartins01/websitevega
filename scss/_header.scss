@@ -65,34 +65,13 @@
             max-width: 100%;
         }
     }
-
-    @include responsivo('laptop'){
-        // Aqui voce inclui seu responsivo laptop, ou breakpoint que escolher
-    }
 }
 
-// Estilos do Ícone de Toggle
-.menu-icon {
-    cursor: pointer;
-    width: 30px;
-    height: 20px;
-    transition: opacity $transition-default;
-}
-
-#menu-toggle {
-    position: absolute;
-    top: $spacing-md;
-    right: $spacing-md;
-    z-index: $z-index-high + 1; // Garante que o ícone fique acima do menu mobile
-}
-
-// Estilos do Menu Mobile (independente, sem aninhamento)
+// MENU MOBILE //
 .mobile-menu {
-    width: 412px;
     width: 100%;
     max-width: 100%;
     height: max-content;
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -100,84 +79,229 @@
     z-index: $z-index-high;
     flex-direction: column;
     align-items: center;
+    display: none; // Padrão: escondido até ser ativado
 
-}
+    .mobile-menu__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing-md;
+        background: $neutral-25;
+    }
 
-.mobile-menu__header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $spacing-md;
-    background: $neutral-25;
-}
+    .mobile-menu__logo {
+        z-index: 3;
 
-.mobile-menu__logo {
-    z-index: 3;
+        img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
 
-    img {
-        display: block;
-        width: auto;
+    #menu-toggle {
+        position: absolute;
+        top: $spacing-md;
+        right: $spacing-md;
+        z-index: $z-index-high + 1;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+        transition: opacity $transition-default;
+    }
+
+    .mobile-menu__nav {
+        background: $pri-25;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        width: 412px;
         height: auto;
-        max-width: 100%;
+        position: absolute;
+        right: 0;
+        padding: 100px 16px 16px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        z-index: 2;
 
+        .mobile-menu__nav-link {
+            @include flex-center;
+            gap: $spacing-xs;
+            padding: 2%;
+            color: $neutral-900;
+            font-size: $font-size-base;
+            font-weight: $font-weight-semibold;
+            line-height: $line-height-default;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .mobile-menu__nav-link:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu__login-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .mobile-menu__nav-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            background-color: $acc-700;
+            color: $neutral-25;
+            font-size: $font-size-base;
+            font-weight: $font-weight-semibold;
+            line-height: $line-height-default;
+            text-align: center;
+            text-decoration: none;
+        }
     }
 }
 
-.mobile-menu__nav {
-    background: $pri-25;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    align-items: center;
-    width: 412px;
-    height: auto;
-    position: absolute;
-    right: 0;
-    padding: 100px 16px 16px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    z-index: 2;
+// RESPONSIVIDADE //
+@include responsivo ('laptop') {
+    .header {
+        padding: $spacing-md;
 
-    .mobile-menu__nav-link {
-        @include flex-center;
-        gap: $spacing-xs;
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__nav-wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__nav {
+            display: flex;
+        }
+    }
+
+    .header:not(.is-open) {
+        #mobile-menu {
+            display: block;
+            background: transparent;
+            box-shadow: none;
+            width: 30px;
+            height: 20px;
+
+            .mobile-menu__header {
+                background: transparent;
+            }
+
+            .mobile-menu__nav {
+                display: none;
+            }
+        }
+    }
+
+    .header.is-open {
+        #mobile-menu {
+            display: flex;
+            background: $neutral-25;
+            width: 412px;
+
+            .mobile-menu__nav {
+                display: flex;
+            }
+        }
+    }
+
+    #mobile-menu .mobile-menu__nav .mobile-menu__nav-link:nth-child(-n + 3) {
+        display: none;
     }
 }
 
-.mobile-menu__nav-link {
-    padding: 2%;
-    color: $neutral-900;
-    font-size: $font-size-base;
-    font-weight: $font-weight-semibold;
-    line-height: $line-height-default;
-    text-align: center;
-    text-decoration: none;
-    transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
+@include responsivo ('tablet') {
+    .header {
+        padding: $spacing-md;
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__nav-wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__menu,
+        &__nav {
+            display: none;
+        }
+        
+        #menu-toggle {
+            display: block; // Garante que o ícone apareça no breakpoint tablet
+        }
+    }
+
+    .header.is-open {
+        #mobile-menu {
+            display: flex;
+            background: $neutral-25;
+            width: 412px;
+
+            .mobile-menu__header {
+                display: flex;
+            }
+
+            .mobile-menu__nav {
+                display: flex;
+            }
+
+            .mobile-menu__logo {
+                display: block;
+            }
+        }
+    }
+
+    #mobile-menu .mobile-menu__nav .mobile-menu__nav-link:nth-child(-n + 3) {
+        display: block;
+    }
 }
 
-.mobile-menu__nav-link:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
-}
+@include responsivo ('mobile') {
+    .header.is-open {
+        .header__container {
+            display: none;
+        }
 
-.mobile-menu__login-icon {
-    width: 16px;
-    height: 16px;
-}
+        #mobile-menu {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            z-index: 3;
+            justify-content: center;
 
-.mobile-menu__nav-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    background-color: $acc-700;
-    color: $neutral-25;
-    font-size: $font-size-base;
-    font-weight: $font-weight-semibold;
-    line-height: $line-height-default;
-    text-align: center;
-    text-decoration: none;
+            .mobile-menu__nav {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                padding: 16px;
+                position: absolute;
+                top: 0;
+                padding-top: 80px;
+                gap: 24px;
+            }
+
+            .mobile-menu__nav-link {
+                padding: 5%;
+            }
+        }
+    }
 }

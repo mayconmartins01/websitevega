@@ -1,9 +1,9 @@
 // _breakpoints.scss
-
+/* 
 $breakpoint-LG1200: 1200px;
 $breakpoint-LG1024: 1024px;
 $breakpoint-LG_768: 768px;
-$breakpoint-LG_560: 560px;
+$breakpoint-LG_560: 560px; */
 
 // Acima de 1200px: Desktop, menu mobile escondido
 @media (min-width: $breakpoint-LG1200) {
@@ -174,3 +174,5 @@ $breakpoint-LG_560: 560px;
         padding: $spacing-sm;
     }
 }
+
+@import 'header';

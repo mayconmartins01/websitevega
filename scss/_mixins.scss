@@ -25,7 +25,7 @@
 @mixin flex-space-between-start {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 
@@ -89,11 +89,13 @@ $breakpoints: (
 );
 
 @mixin responsivo($breakpoint-name) {
-    @if map-has-key($breakpoints, $breakpoint-name){
-        @media (max-width: map-get($breakpoints, $breakpoint-name)){
+    @if map-has-key($breakpoints, $breakpoint-name) {
+        @media (max-width: map-get($breakpoints, $breakpoint-name)) {
             @content;
         }
-    } @else {
+    }
+
+    @else {
         @warn "Este breakpoint que você definiu não existe"
     }
 }
