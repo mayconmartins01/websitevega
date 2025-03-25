@@ -176,3 +176,157 @@ $breakpoint-LG_560: 560px; */
 }
 
 @import 'header';
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------
+
+
+
+
+// RESPONSIVIDADE //
+@include responsivo ('laptop') {
+    .header {
+        padding: $spacing-md;
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__nav-wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__nav {
+            display: flex;
+        }
+    }
+
+    .header:not(.is-open) {
+        #mobile-menu {
+            display: block;
+            background: transparent;
+            box-shadow: none;
+            width: 30px;
+            height: 20px;
+
+            .mobile-menu__header {
+                background: transparent;
+            }
+
+            .mobile-menu__nav {
+                display: none;
+            }
+        }
+    }
+
+    .header.is-open {
+        #mobile-menu {
+            display: flex;
+            background: $neutral-25;
+            width: 412px;
+
+            .mobile-menu__nav {
+                display: flex;
+            }
+        }
+    }
+
+    #mobile-menu .mobile-menu__nav .mobile-menu__nav-link:nth-child(-n + 3) {
+        display: none;
+    }
+}
+
+@include responsivo ('tablet') {
+    .header {
+        padding: $spacing-md;
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__nav-wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__menu,
+        &__nav {
+            display: none;
+        }
+        
+        #menu-toggle {
+            display: block; // Garante que o ícone apareça no breakpoint tablet
+        }
+    }
+
+    .header.is-open {
+        #mobile-menu {
+            display: flex;
+            background: $neutral-25;
+            width: 412px;
+
+            .mobile-menu__header {
+                display: flex;
+            }
+
+            .mobile-menu__nav {
+                display: flex;
+            }
+
+            .mobile-menu__logo {
+                display: block;
+            }
+        }
+    }
+
+    #mobile-menu .mobile-menu__nav .mobile-menu__nav-link:nth-child(-n + 3) {
+        display: block;
+    }
+}
+
+@include responsivo ('mobile') {
+    .header.is-open {
+        .header__container {
+            display: none;
+        }
+
+        #mobile-menu {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            z-index: 3;
+            justify-content: center;
+
+            .mobile-menu__nav {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                padding: 16px;
+                position: absolute;
+                top: 0;
+                padding-top: 80px;
+                gap: 24px;
+            }
+
+            .mobile-menu__nav-link {
+                padding: 5%;
+            }
+        }
+    }
+}

@@ -151,6 +151,58 @@
   }
 }
 
+@include responsivo ('tablet') {
+  .f-footer {
+    .container {
+
+      .content-footer {
+        text-align: center;
+
+        .social {
+          justify-content: center;
+        }
+
+        .text-footer p {
+          margin: 0 auto;
+        }
+
+        .text-contatos {
+          @include flex-column;
+          align-items: center
+        }
+
+        .assinatura {
+          @include flex-column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .test-buttons {
   width: 100%;
   margin: $spacing-huge 0;

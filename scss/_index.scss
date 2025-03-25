@@ -6,6 +6,16 @@
   overflow: hidden;
   color: $neutral-25;
 
+  .container {
+    .wrapper-slide-mobile {
+      display: none;
+
+      .wrapper-bg-home.bg-mobile {
+        display: none;
+      }
+    }
+  }
+
   .wrapper-bg-home {
     position: relative;
     width: 100%;
@@ -164,6 +174,65 @@
   }
 }
 
+@include responsivo('tablet') {
+  .wrapper-home {
+    height: max-content;
+    gap: $spacing-xxxl;
+    flex-wrap: wrap;
+  }
+}
+
+@include responsivo('mobile') {
+  .wrapper-bg-home {
+    display: none;
+  }
+
+  .s-hero-home {
+    .container {
+      .wrapper-slide-mobile {
+        display: block;
+
+        .wrapper-bg {
+          position: relative;
+          width: 100%;
+
+          .box-bar-progress {
+            position: absolute;
+            bottom: 17px;
+            width: 100%;
+            height: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 13px;
+
+            .bar-progress {
+              width: 42px;
+              height: 100%;
+              background: $neutral-400;
+            }
+          }
+        }
+
+        .slider.mobile {
+          width: 100%;
+          height: max-content;
+          padding-top: 28px;
+
+          .wrapper-text-protection {
+            padding: 8px 0 12px;
+          }
+        }
+      }
+
+      .wrapper-slide-mobile.TML,
+      .wrapper-slide-mobile.DTS,
+      .wrapper-slide-mobile.ALT {
+        display: none;
+      }
+    }
+  }
+}
+
 .s-about-mission {
   padding-top: $spacing-giga;
   padding-bottom: $spacing-giga;
@@ -202,8 +271,15 @@
     .solutions__nav {
       width: 100%;
       max-width: 100%;
-      @include flex-space-between;
+      @include alig-start;
       padding-bottom: $spacing-md;
+      gap: $spacing-xxxl;
+
+      .group-slt1,
+      .group-slt2 {
+        display: flex;
+        gap: $spacing-xxxl;
+      }
     }
 
     #div-slt-tcm,
@@ -313,6 +389,53 @@
   }
 }
 
+@include responsivo('laptop') {
+  .s-hero-solutions {
+    .container {
+      flex-wrap: wrap;
+      /* justify-content: center; */
+
+      .solutions__nav {
+        flex-wrap: wrap;
+        /* justify-content: center; */
+
+        .group-slt1,
+        .group-slt2 {
+          display: flex;
+          gap: $spacing-xxxl;
+        }
+      }
+
+      .box-bg-solutions {
+        width: 100%;
+        height: auto;
+      }
+
+      .solutions__text-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include responsivo('tablet') {
+  .s-hero-solutions {
+    .container {
+      .solutions__nav {
+
+        .group-slt1,
+        .group-slt2 {
+          width: 100%;
+          display: flex;
+          gap: $spacing-sm;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
 .s-numbers {
   padding-bottom: $spacing-giga;
 
@@ -366,7 +489,7 @@
           @include alig-start;
           padding: $spacing-lg 0 $spacing-lg $spacing-lg;
           width: 432px;
-          height: 323px;
+          height: max-content;
 
           .tdesc-card1 {
             h4 {
@@ -431,7 +554,7 @@
           @include flex-space-between;
           @include alig-start;
           padding: $spacing-lg 0 $spacing-lg $spacing-lg;
-          height: 323px;
+          height: max-content;
 
           .tdesc-card1 {
             h4 {
@@ -505,6 +628,24 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@include responsivo('laptop') {
+  .s-differentials {
+    .container {
+      .cards-differentials {
+        .line-top {
+
+          @include flex-space-evenly;
+        }
+
+        .line-bottom {
+          @include flex-center;
+          justify-content: center;
         }
       }
     }
@@ -603,6 +744,56 @@
   }
 }
 
+@include responsivo ('laptop') {
+  .s-central24h {
+    .container {
+      .content-central {
+        @include flex-space-between-start;
+        flex-wrap: nowrap;
+
+        @include flex-column;
+
+        .cta-24h {
+          padding-bottom: 56px;
+        }
+      }
+
+      .s-central24h {
+        padding: $spacing-giga 0 154px 0;
+
+        .list-24h {
+          margin-top: 56px;
+
+          ul {
+            li {
+              @include flex-start;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsivo ('tablet') {
+  .s-central24h {
+    .container {
+      .list-24h {
+        ul {
+          /* width: 100%; */
+
+          li {
+            @include flex-column;
+            width: 100%;
+            gap: $spacing-md;
+          }
+        }
+      }
+    }
+  }
+}
+
 .s-contact {
   position: relative;
   background: linear-gradient(95deg, #359E24 -1.13%, $acc-500 100%);
@@ -610,12 +801,12 @@
   overflow: hidden;
 
   .container {
-    position: relative;
+    /* position: relative; */
     z-index: $z-index-low;
     margin: 0 auto;
 
     .contact {
-      position: relative;
+      /* position: relative; */
 
       .content-contact {
         max-width: 426px;
@@ -638,10 +829,20 @@
 
       .img-vega {
         position: absolute;
-        top: -36px;
+        bottom: 0;
         right: -26%;
-        width: 1060px;
-        height: 344px;
+      }
+    }
+  }
+}
+
+@include responsivo ('laptop') {
+  .s-contact {
+    .container {
+      .contact {
+        .img-vega {
+          width: 60%;
+        }
       }
     }
   }
