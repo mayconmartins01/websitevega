@@ -46,9 +46,7 @@
 }
 
 @mixin flex-row-center {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+
 }
 
 @mixin button-style($background, $hover-background: null) {
@@ -81,7 +79,7 @@
     font-style: normal;
 }
 
-@mixin spacing($padding: 0, $margin: 0, $gap: 0) {
+@mixin spacing($padding: 0, $margin: 0, $gap: 50) {
     padding: $padding;
     margin: $margin;
     gap: $gap;

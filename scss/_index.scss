@@ -7,6 +7,190 @@
   color: $neutral-25;
 
   .container {
+
+    .wrapper-bg-home {
+      position: relative;
+      width: 100%;
+      height: 446px;
+      overflow: hidden;
+
+      #bg-sh-hero {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #line-header-left {
+        position: absolute;
+        top: 50%;
+        left: 24px;
+        z-index: 1;
+      }
+
+      .wrapper-text-protection {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 392px;
+        height: 66px;
+        padding: 14px 15px;
+        border-top: 1px solid $neutral-25;
+        border-left: 1px solid $neutral-25;
+        z-index: 2;
+
+        .text-sh-home-protection {
+          transition: opacity 0.5s ease;
+        }
+      }
+
+      .wrapper-slider {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        .slider {
+          cursor: pointer;
+          position: relative;
+          width: 306px;
+          padding-top: 12px;
+
+          p {
+            padding-top: 6px;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: $acc-500;
+            z-index: 3;
+            transition: width 8s linear;
+          }
+
+          &.active-progress::before {
+            width: 100%;
+          }
+
+          &:not(.active-progress)::before {
+            width: 0;
+            transition: width 0s linear;
+          }
+
+          .title,
+          .description {
+            transition: opacity 0.5s ease;
+          }
+        }
+
+        #desc-rst {
+          width: 217px;
+        }
+
+        #desc-tlm {
+          width: 242px;
+        }
+
+        #desc-dts {
+          width: 306px;
+        }
+
+        #desc-alt {
+          width: 294px;
+        }
+      }
+
+      @include responsivo('mobile') {
+        display: none;
+      }
+    }
+
+    .wrapper-home {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-items: flex-end;
+      margin: 48px 0 32px;
+
+      h1 {
+        max-width: 618px;
+        color: $neutral-900;
+      }
+
+      @include responsivo('tablet') {
+        height: max-content;
+        gap: 48px;
+        flex-wrap: wrap;
+
+      }
+    }
+
+    .nav-page {
+      width: 357px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+
+      &__caption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.4rem;
+        gap: 1rem;
+
+
+        p {
+          color: $neutral-600;
+          @include typography($font-size-xs, $font-weight-medium, $line-height-default, -0.18px);
+        }
+      }
+
+      &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;
+        align-self: stretch;
+        justify-content: center;
+
+        a {
+          color: $neutral-900;
+          @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
+        }
+      }
+    }
+
+    .box-icon-down {
+      width: 20px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+
+    }
+
+    .about-solutions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+
+    }
+
     .wrapper-slide-mobile {
       display: none;
 
@@ -15,173 +199,9 @@
       }
     }
   }
-
-  .wrapper-bg-home {
-    position: relative;
-    width: 100%;
-    height: 446px;
-    overflow: hidden;
-
-    #bg-sh-hero {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    #line-header-left {
-      position: absolute;
-      top: 50%;
-      left: $spacing-lg;
-      z-index: $z-index-low;
-    }
-
-    .wrapper-text-protection {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 392px;
-      height: 66px;
-      padding: $spacing-sm 15px;
-      border-top: 1px solid $neutral-25;
-      border-left: 1px solid $neutral-25;
-      z-index: $z-index-medium;
-
-      .text-sh-home-protection {
-        transition: opacity 0.5s ease;
-      }
-    }
-
-    .wrapper-slider {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      @include flex-row;
-      @include spacing($gap: $spacing-lg);
-      z-index: $z-index-medium;
-      flex-wrap: wrap;
-
-      .slider {
-        cursor: pointer;
-        position: relative;
-        width: 306px;
-        padding-top: $spacing-sm;
-
-        p {
-          padding-top: 6px;
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: -3px;
-          left: 0;
-          width: 0;
-          height: 3px;
-          background-color: $acc-500;
-          z-index: $z-index-high;
-          transition: width 8s linear;
-        }
-
-        &.active-progress::before {
-          width: 100%;
-        }
-
-        &:not(.active-progress)::before {
-          width: 0;
-          transition: width 0s linear;
-        }
-
-        .title,
-        .description {
-          transition: opacity 0.5s ease;
-        }
-      }
-
-      #desc-rst {
-        width: 217px;
-      }
-
-      #desc-tlm {
-        width: 242px;
-      }
-
-      #desc-dts {
-        width: 306px;
-      }
-
-      #desc-alt {
-        width: 294px;
-      }
-    }
-  }
-
-  .wrapper-home {
-    @include flex-space-between;
-    align-items: flex-end;
-    margin: $spacing-xxxl 0 $spacing-xl;
-
-    h1 {
-      max-width: 618px;
-      color: $neutral-900;
-    }
-  }
-
-  .nav-page {
-    width: 357px;
-    height: 50px;
-    @include flex-column;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-
-    &__caption {
-      @include flex-center;
-      padding: 0 0.4rem;
-      gap: 1rem;
-
-      p {
-        color: $neutral-600;
-        @include typography($font-size-xs, $font-weight-medium, $line-height-default, -0.18px);
-      }
-    }
-
-    &__links {
-      @include flex-center;
-      gap: 2.4rem;
-      align-self: stretch;
-      justify-content: center;
-
-      a {
-        color: $neutral-900;
-        @include typography($font-size-sm, $font-weight-semibold, $line-height-default, -0.21px);
-      }
-    }
-  }
-
-  .box-icon-down {
-    width: 20px;
-    height: 100%;
-    @include flex-center;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .about-solutions {
-    @include flex-column;
-    @include spacing($gap: 1.2rem);
-  }
 }
 
-@include responsivo('tablet') {
-  .wrapper-home {
-    height: max-content;
-    gap: $spacing-xxxl;
-    flex-wrap: wrap;
-  }
-}
-
+/* @media MENU MOBILE */
 @include responsivo('mobile') {
   .wrapper-bg-home {
     display: none;
@@ -233,9 +253,10 @@
   }
 }
 
+///////////////////
+
 .s-about-mission {
-  padding-top: $spacing-giga;
-  padding-bottom: $spacing-giga;
+  padding: 120px 0;
 
   h3 {
     max-width: 112.7rem;
@@ -248,16 +269,16 @@
 
     p {
       max-width: 36.2rem;
-      padding-top: $spacing-lg;
+      padding-top: 24px;
     }
   }
 }
 
 .s-hero-solutions {
-  margin-bottom: $spacing-giga;
+  margin-bottom: 120px;
 
   h2 {
-    padding-bottom: $spacing-xl;
+    padding-bottom: 24px;
   }
 
   .container {
@@ -266,20 +287,26 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    @include flex-space-between;
+    justify-content: space-between;
+    align-items: center;
+
+
 
     .solutions__nav {
       width: 100%;
       max-width: 100%;
-      @include alig-start;
-      padding-bottom: $spacing-md;
-      gap: $spacing-xxxl;
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 18px;
+      gap: 40px;
 
       .group-slt1,
       .group-slt2 {
         display: flex;
-        gap: $spacing-xxxl;
+        gap: 40px;
       }
+
+
     }
 
     #div-slt-tcm,
@@ -301,14 +328,19 @@
     #div-slt-yl,
     #div-slt-vv,
     #div-slt-ind {
-      @include flex-column;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
       height: 36px;
-      @include flex-space-between;
       align-items: center;
 
       a {
         color: $acc-700;
       }
+
+
     }
 
     #seletor-point {
@@ -331,11 +363,12 @@
     .solutions__text-wrapper {
       width: 660px;
       height: 617px;
-      @include flex-column;
-      @include flex-space-between;
-      @include alig-start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
       padding-top: 17px;
-      padding-bottom: $spacing-md;
+      padding-bottom: 18px;
 
       .solutions__content {
         border-top: 1px solid $neutral-900;
@@ -349,15 +382,15 @@
         }
 
         .span-text {
-          padding: $spacing-md 0 $spacing-lg 0;
+          padding: 18px 0 20px 0;
         }
 
         .title-text-solutions {
-          padding-bottom: $spacing-md;
+          padding-bottom: 18px;
         }
 
         .button-text {
-          padding-top: $spacing-lg;
+          padding-top: 20px;
         }
       }
 
@@ -373,16 +406,18 @@
           width: 100%;
           height: auto;
           border-bottom: 1px solid $neutral-100;
-          padding: $spacing-xs 0;
-          @include flex-start;
-          gap: $spacing-xs;
+          padding: 12px 0;
+          display: flex;
+          justify-content: flex-start;
+          gap: 12px;
 
           #point-form {
-            margin-right: $spacing-sm;
+            margin-right: 14px;
             position: absolute;
             left: 0;
             top: 50%;
           }
+
         }
       }
     }
@@ -393,16 +428,14 @@
   .s-hero-solutions {
     .container {
       flex-wrap: wrap;
-      /* justify-content: center; */
 
       .solutions__nav {
         flex-wrap: wrap;
-        /* justify-content: center; */
 
         .group-slt1,
         .group-slt2 {
           display: flex;
-          gap: $spacing-xxxl;
+          gap: 40px;
         }
       }
 
@@ -427,7 +460,7 @@
         .group-slt2 {
           width: 100%;
           display: flex;
-          gap: $spacing-sm;
+          gap: 12px;
           justify-content: space-between;
           flex-wrap: wrap;
         }
@@ -437,17 +470,19 @@
 }
 
 .s-numbers {
-  padding-bottom: $spacing-giga;
+  padding-bottom: 120px;
 
   .container {
     .title-content {
-      padding-bottom: $spacing-xxl;
+      padding-bottom: 40px;
     }
 
     .numbers-content {
-      @include flex-space-between;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      gap: $spacing-xl 0;
+      gap: 32px;
 
       h3 {
         font-size: 6.4rem;
@@ -455,7 +490,7 @@
 
       .n-cont {
         p {
-          padding-top: $spacing-sm;
+          padding-top: 12px;
         }
       }
     }
@@ -469,31 +504,38 @@
   .container {
     .d-title {
       color: $neutral-25;
-      padding-bottom: $spacing-xxl;
+      padding-bottom: 32px;
     }
 
     .cards-differentials {
       .line-top {
-        @include flex-space-between;
-
-        padding-bottom: $spacing-lg;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
         flex-wrap: wrap;
-        gap: $spacing-lg 0;
+        gap: 20px 0;
+
+
+
+
 
         .card1,
         .card2,
         .card3 {
 
-          @include flex-column;
-          @include flex-space-between;
-          @include alig-start;
-          padding: $spacing-lg 0 $spacing-lg $spacing-lg;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: 20px;
+          /* red */
           width: 432px;
-          height: max-content;
+          height: 323px;
 
           .tdesc-card1 {
             h4 {
-              padding-bottom: $spacing-sm;
+              padding-bottom: 14px;
               color: $neutral-200;
             }
 
@@ -503,11 +545,15 @@
           }
 
           .cards {
-            @include flex-column;
-            @include spacing($gap: $spacing-xs);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
 
             .card-list {
-              @include flex-center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               gap: 13px;
               color: $neutral-400;
             }
@@ -543,22 +589,24 @@
       }
 
       .line-bottom {
-        @include flex-space-between-start;
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: $spacing-lg 0;
+        gap: 20px 0;
 
         .card4,
         .card5 {
           height: max-content;
-          @include flex-column;
-          @include flex-space-between;
-          @include alig-start;
-          padding: $spacing-lg 0 $spacing-lg $spacing-lg;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: 24px 0 24px 24px;
           height: max-content;
 
           .tdesc-card1 {
             h4 {
-              padding-bottom: $spacing-sm;
+              padding-bottom: 12px;
               color: $neutral-200;
             }
 
@@ -568,16 +616,21 @@
           }
 
           .cards {
-            @include flex-column;
-            @include spacing($gap: $spacing-xs);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
 
             .card-list {
-              @include flex-center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               gap: 13px;
               color: $neutral-400;
 
               p {
                 color: $neutral-200;
+
               }
             }
           }
@@ -585,7 +638,9 @@
 
         .card4 {
           width: 546px;
+          height: 323px;
           background-color: #262D35;
+          padding: 20px;
 
           .tdesc-card1 {
             p {
@@ -596,7 +651,7 @@
 
         .card5 {
           width: 774px;
-          height: max-content;
+          height: 323px;
           padding-bottom: 63px;
           background-image: url("data:image/svg+xml,%3Csvg width='774' height='323' viewBox='0 0 774 323' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M774 0H0V301.135L246.52 301L284.693 323H489.307L527.48 301L774 301.135V0Z' fill='%23262D35'/%3E%3C/svg%3E");
           background-size: cover;
@@ -605,13 +660,19 @@
 
           .tdesc-card1 {
             ul {
-              @include flex-column;
-              @include spacing($gap: $spacing-sm);
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 12px;
+              padding-bottom: 24px;
 
               li {
                 color: $neutral-400;
-                @include flex-column;
-                @include spacing($gap: $spacing-md);
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                align-items: center;
+                height: max-content;
 
                 span {
                   color: rgba(37, 44, 55, 0.8);
@@ -620,14 +681,34 @@
                   background: $acc-500;
                   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25) inset;
                   width: 56px;
-                  height: $spacing-lg;
+                  height: 24px;
                   padding: 0 6px;
-                  @include flex-center;
-                  text-align: center;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                }
+
+                @include responsivo('mobile') {
+                  align-items: flex-start;
+                }
+
+                p {
+                  max-width: max-content;
+
+                  @include responsivo('mobile') {
+                    width: 80%;
+                  }
+
                 }
               }
             }
           }
+
+          @include responsivo('mobile') {
+            height: max-content
+          }
+
         }
       }
     }
@@ -640,12 +721,15 @@
       .cards-differentials {
         .line-top {
 
-          @include flex-space-evenly;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
         }
 
         .line-bottom {
-          @include flex-center;
+          display: flex;
           justify-content: center;
+          align-items: center;
         }
       }
     }
@@ -653,11 +737,12 @@
 }
 
 .s-central24h {
-  padding: $spacing-giga 0 154px 0;
+  padding: 120px 0 154px 0;
 
   .container {
     .content-central {
-      @include flex-space-between-start;
+      display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
 
       .content24h {
@@ -666,27 +751,30 @@
         }
 
         h2 {
-          padding: $spacing-sm 0;
+          padding: 12px 0;
         }
       }
 
       .cta-24h {
-        padding-top: $spacing-lg;
+        padding-top: 24px;
       }
     }
 
     .list-24h {
       ul {
         li {
-          @include flex-start;
+          display: flex;
+          justify-content: flex-start;
           border-top: 1px solid $neutral-900;
           width: 774px;
           padding: 28px 0 20px 0;
           gap: 64px;
 
           .content-left {
-            @include flex-row-center;
-            @include spacing($gap: $spacing-lg);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 24px;
 
             h4 {
               width: 277px;
@@ -748,10 +836,11 @@
   .s-central24h {
     .container {
       .content-central {
-        @include flex-space-between-start;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
         flex-wrap: nowrap;
-
-        @include flex-column;
 
         .cta-24h {
           padding-bottom: 56px;
@@ -759,14 +848,15 @@
       }
 
       .s-central24h {
-        padding: $spacing-giga 0 154px 0;
+        padding: 120px 0 154px 0;
 
         .list-24h {
           margin-top: 56px;
 
           ul {
             li {
-              @include flex-start;
+              display: flex;
+              justify-content: flex-start;
               width: 100%;
             }
           }
@@ -784,9 +874,11 @@
           /* width: 100%; */
 
           li {
-            @include flex-column;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             width: 100%;
-            gap: $spacing-md;
+            gap: 16px;
           }
         }
       }
@@ -802,7 +894,7 @@
 
   .container {
     /* position: relative; */
-    z-index: $z-index-low;
+    z-index: 1;
     margin: 0 auto;
 
     .contact {
@@ -818,19 +910,19 @@
 
         h2 {
           max-width: 426px;
-          padding-bottom: $spacing-sm;
+          padding-bottom: 14px;
         }
 
         p {
           max-width: 266px;
-          padding-bottom: $spacing-lg;
+          padding-bottom: 24px;
         }
       }
 
       .img-vega {
         position: absolute;
         bottom: 0;
-        right: -26%;
+        right: -16%;
       }
     }
   }
