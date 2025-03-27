@@ -1,1 +1,56 @@
 // Usado exclusivamente para página Central 24h (central24h.html)
+
+
+.s-hero-home {
+    .container {
+
+        .wrapper-bg-home.wrp-bg_h-central24h {
+            height: 545px;
+            min-height: 545px;
+            position: relative;
+            background-image: url(../img/bg-s-hero-central-24h.webp);
+            background-size: cover;
+            background-position: left center;
+            background-repeat: no-repeat;
+
+            @include responsivo('mobile') {
+                display: block;
+                height: 938px;
+                min-height: 938px;
+                min-height: max-content;
+                background-image: url(../img/bg-s-hero-central-24h-MOBILE.webp);
+                background-size: cover;
+
+            }
+
+            .box-text {
+                width: 220px;
+                padding: 16px;
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .wrapper-text-protection.wrp-txt-central24h {
+                @include responsivo('mobile') {
+                    border: none;
+                }
+            }
+        }
+
+
+    }
+}
+
+.s-hero-sobre {
+    .container {
+        .box-sobre-proj_esp.box-sobre-central24h {
+            padding: 120px 114px 0;
+
+            @include responsivo('tablet') {
+                padding: 120px 16px;
+            }
+        }
+    }
+}
