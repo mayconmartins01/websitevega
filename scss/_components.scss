@@ -35,12 +35,16 @@
 .wrapper-steps {
   width: 100%;
   height: auto;
-  @include flex-space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: $spacing-mega;
+  flex-wrap: wrap;
 
   .step {
     width: 242.4px;
     height: 124px;
+    margin-bottom: 30px;
 
     .number-step {
       @include flex-space-between;
@@ -54,16 +58,52 @@
 
     .content-step {
       img {
-        padding-top: $spacing-xl;
-        padding-bottom: $spacing-xs;
+        padding-top: 32px;
+        padding-bottom: 8px;
+
+        @include responsivo('mobile') {
+          width: 100%;
+        }
       }
 
       p {
-        max-width: 221px;
+        /* max-width: 221px; */
         @include typography($font-size-lg, $font-weight-medium, $line-height-default);
       }
     }
+
+    @include responsivo('ultra') {
+      justify-content: flex-start;
+    }
+
+    @include responsivo('mobile') {
+      width: 100%;
+    }
   }
+
+  .stp1 {
+    .content-step p {
+      max-width: 210px;
+    }
+  }
+
+  .stp2 {
+    .content-step p {
+      max-width: 221px;
+    }
+  }
+
+  .stp5 {
+    .content-step p {
+      max-width: 172px;
+    }
+  }
+
+  @include responsivo('ultra') {
+    justify-content: flex-start;
+    gap: 48px;
+  }
+
 }
 
 .btn--default2 {
