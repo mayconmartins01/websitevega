@@ -7,6 +7,10 @@
         @include flex-space-between;
         width: 100%;
         position: relative;
+
+        @include responsivo('mobile') {
+            display: none;
+        }
     }
 
     &__nav-wrapper {
@@ -141,6 +145,9 @@
             text-decoration: none;
             transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
 
+            @include responsivo('tablet') {
+                padding-right: $spacing-xs;
+            }
         }
 
         .mobile-menu__nav-link:hover {
@@ -170,31 +177,6 @@
     }
 }
 
-// RESPONSIVIDADE //
-@include responsivo('laptop') {
-    .header {
-        &__navENDAwrapper {
-            padding-right: $spacing-xs;
-        }
-
-        &__nav {
-            margin-left: $spacing-xs;
-            gap: $spacing-xs;
-        }
-
-        &__menu {
-            gap: $spacing-xs;
-        }
-    }
-}
-
-@include responsivo('tablet') {
-    .header {
-        &__login-link {
-            padding-right: $spacing-xs;
-        }
-    }
-}
 
 @include responsivo('mobile') {
     .header__container {
@@ -202,7 +184,6 @@
     }
 
     #mobile-menu {
-
         display: flex;
         width: 100%;
         max-width: 100%;
