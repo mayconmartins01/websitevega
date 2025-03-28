@@ -526,7 +526,7 @@
                             width: 399px;
 
                             @include responsivo('mobile') {
-                                width: 100%;
+                                min-width: 100%;
                             }
                         }
 
@@ -534,20 +534,32 @@
                             width: 373px;
 
                             @include responsivo('mobile') {
-                                width: 100%;
+                                min-width: 100%;
                             }
                         }
 
                         .p-list3 {
                             width: 277px;
+
+                            @include responsivo('mobile') {
+                                min-width: 100%;
+                            }
                         }
 
                         .p-list4 {
                             width: 274px;
+
+                            @include responsivo('mobile') {
+                                min-width: 100%;
+                            }
                         }
 
                         .p-list5 {
                             width: 274px;
+
+                            @include responsivo('mobile') {
+                                min-width: 100%;
+                            }
                         }
 
                         @include responsivo('laptop') {

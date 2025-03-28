@@ -807,27 +807,51 @@
           .content-right {
             p {
               max-width: 399px;
+
+              @include responsivo ('mobile') {
+                max-width: 100%;
+              }
             }
           }
         }
 
         li:nth-child(2) .content-right p {
           max-width: 387px;
+
+          @include responsivo ('mobile') {
+            max-width: 100%;
+          }
         }
 
         li:nth-child(3) .content-right p {
           max-width: 282px;
+
+          @include responsivo ('mobile') {
+            max-width: 100%;
+          }
         }
 
         li:nth-child(4) .content-right p {
           max-width: 280px;
+
+          @include responsivo ('mobile') {
+            max-width: 100%;
+          }
         }
 
         li:last-child {
           border-bottom: 1px solid $neutral-900;
 
+          @include responsivo ('mobile') {
+            max-width: 100%;
+          }
+
           .content-right p {
             max-width: 277px;
+
+            @include responsivo ('mobile') {
+              max-width: 100%;
+            }
           }
         }
       }
