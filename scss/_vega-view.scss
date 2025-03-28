@@ -34,7 +34,6 @@
                 min-height: max-content;
                 background-image: url(../img/bg-s-hero-vega-view-MOBILE.webp);
                 background-size: cover;
-
             }
 
             .wrapper-text-protection.wrp-txt-vega-view {
@@ -45,10 +44,8 @@
                         width: 100%;
                     }
                 }
-
             }
         }
-
     }
 }
 
@@ -70,10 +67,13 @@
 }
 
 .s-hero-Car-Truck {
-    margin: $spacing-lg 0 $spacing-giga;
+    margin: 24px 0 120px;
+
+    @include responsivo('mobile') {
+        margin: 24px 0 32px;
+    }
 
     .container {
-
         .wrapper-Car-Truck {
             width: 100%;
             height: 352px;

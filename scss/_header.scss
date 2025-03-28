@@ -1,11 +1,13 @@
 // Estilos do Menu Principal
 .header {
-    padding: $spacing-md $spacing-xxxl;
+    padding: 16px 48px;
     position: relative;
     background-color: #fff;
 
     &__container {
-        @include flex-space-between;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
         position: relative;
 
@@ -17,13 +19,17 @@
 
     &__nav-wrapper {
         width: max-content;
-        @include flex-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__nav {
-        @include flex-center;
-        margin-left: $spacing-xxl;
-        gap: $spacing-xxl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+        gap: 40px;
 
         @include responsivo('laptop') {
             gap: 8px;
@@ -32,8 +38,10 @@
     }
 
     &__menu {
-        @include flex-center;
-        gap: $spacing-xl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
 
         .btn {
             @include button-style($acc-700);
@@ -49,8 +57,10 @@
     }
 
     &__login {
-        @include flex-center;
-        gap: $spacing-xs;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
     }
 
     &__login-icon {
@@ -86,12 +96,10 @@
     height: max-content;
     position: fixed;
     top: 0;
-    /* right: 0; */
     z-index: $z-index-high;
     align-items: center;
     display: none; // Padrão: escondido até o breakpoint mobile
     background-color: #fff;
-    /* background-color: blue; */
 
     .mobile-menu__header {
         width: 100%;
@@ -124,9 +132,9 @@
 
         #menu-toggle {
             position: absolute;
-            top: $spacing-md;
-            right: $spacing-md;
-            z-index: $z-index-high + 1;
+            top: 16px;
+            right: 16px;
+            z-index: 5;
             cursor: pointer;
             width: 30px;
             height: 20px;
@@ -155,12 +163,11 @@
         //.mobile-menu__nav
         @include responsivo('mobile') {
             display: none;
-            /* width: 100%; */
+            width: 100%;
             height: 100vh;
             padding: 16px;
             position: absolute;
             top: 0;
-            /* padding-top: 80px; */
             padding: 100px 16px 16px;
             gap: 24px;
         }
@@ -172,12 +179,12 @@
 
         .mobile-menu__nav-link {
             @include flex-center;
-            gap: $spacing-xs;
+            gap: 8px;
             padding: 2%;
             color: $neutral-900;
-            font-size: $font-size-base;
-            font-weight: $font-weight-semibold;
-            line-height: $line-height-default;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 130%;
             text-align: center;
             text-decoration: none;
             transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
@@ -206,9 +213,9 @@
             height: 40px;
             background-color: $acc-700;
             color: $neutral-25;
-            font-size: $font-size-base;
-            font-weight: $font-weight-semibold;
-            line-height: $line-height-default;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 130%;
             text-align: center;
             text-decoration: none;
         }
