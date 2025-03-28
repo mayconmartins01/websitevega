@@ -17,6 +17,7 @@
 
                     @include responsivo('mobile') {
                         width: 100%;
+                        max-width: 90%;
                     }
                 }
             }
@@ -49,6 +50,10 @@
                 @include flex-center;
                 padding: $spacing-lg;
                 gap: 10px;
+
+                @include responsivo ('mobile') {
+                    width: 100%;
+                }
 
                 p {
                     @include typography($font-size-lg, $font-weight-regular, $line-height-default, -0.3px);
@@ -96,6 +101,7 @@
                     @include typography($font-size-sm, $font-weight-regular, $line-height-default, -0.21px);
 
                     @include responsivo('mobile') {
+                        width: 100px;
                         border: none;
                         padding: 0 0 12px 0;
                         margin-right: 0;
@@ -225,6 +231,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding-right: 24px;
             }
 
             .card-proj {
@@ -243,6 +250,7 @@
 
                 @include responsivo('mobile') {
                     width: 100%;
+                    height: max-content;
                 }
             }
 
@@ -516,10 +524,18 @@
 
                         .p-list1 {
                             width: 399px;
+
+                            @include responsivo('mobile') {
+                                width: 100%;
+                            }
                         }
 
                         .p-list2 {
                             width: 373px;
+
+                            @include responsivo('mobile') {
+                                width: 100%;
+                            }
                         }
 
                         .p-list3 {
@@ -539,6 +555,8 @@
                             align-items: flex-start;
                             justify-content: space-evenly;
                         }
+
+
                     }
 
                     .sup-it5 {

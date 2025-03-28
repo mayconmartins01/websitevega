@@ -126,15 +126,14 @@
       }
 
       @include responsivo('tablet') {
+        max-width: 380px;
         height: max-content;
         gap: 48px;
-        flex-wrap: wrap;
-
+        flex-direction: column;
       }
     }
 
     .nav-page {
-      width: 357px;
       height: 50px;
       display: flex;
       flex-direction: column;
@@ -163,6 +162,10 @@
         gap: 2.4rem;
         align-self: stretch;
         justify-content: center;
+
+        @include responsivo('laptop') {
+          gap: .4rem;
+        }
 
         a {
           color: $neutral-900;
@@ -520,10 +523,6 @@
         padding-bottom: 20px;
         flex-wrap: wrap;
         gap: 20px 0;
-
-
-
-
 
         .card1,
         .card2,

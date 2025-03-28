@@ -86,24 +86,27 @@
     height: max-content;
     position: fixed;
     top: 0;
-    right: 0;
+    /* right: 0; */
     z-index: $z-index-high;
-    flex-direction: column;
     align-items: center;
     display: none; // Padrão: escondido até o breakpoint mobile
     background-color: #fff;
+    /* background-color: blue; */
 
     .mobile-menu__header {
-        min-width: 100%;
+        width: 100%;
+        position: absolute;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         padding: $spacing-md;
         z-index: 4;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
 
         //.mobile-menu__header
         @include responsivo('mobile') {
-            width: max-content;
             display: flex;
             display: block;
         }
@@ -138,10 +141,10 @@
         justify-content: flex-end;
         align-items: center;
         gap: 20px;
-        /*         width: 100%;
-        max-width: 100%; */
-        /*         height: 100vh !important;
-        min-height: 100vh; */
+        width: 100%;
+        max-width: 100%;
+        height: 100vh !important;
+        min-height: 100vh;
         position: absolute;
         top: 0;
         right: 0;
@@ -152,7 +155,7 @@
         //.mobile-menu__nav
         @include responsivo('mobile') {
             display: none;
-            width: 100%;
+            /* width: 100%; */
             height: 100vh;
             padding: 16px;
             position: absolute;
@@ -208,21 +211,23 @@
             line-height: $line-height-default;
             text-align: center;
             text-decoration: none;
-
         }
     }
 }
 
-//#mobile-menu
+// DEIXAR ESSE COMPONENTE @MEDIA FORA DO ANINHAMENTO ACIMA !!!!!!!
+//#mobile-menu 
 @include responsivo('mobile') {
     #mobile-menu {
         display: flex;
         z-index: 3;
         justify-content: center;
-        width: 100%;
+        align-items: flex-start;
+        left: 0;
     }
 }
 
+// DEIXAR ESSE COMPONENTE @MEDIA FORA DO ANINHAMENTO ACIMA !!!!!!!
 //.header.is-open // Mostra a navegação quando o toggle é clicado
 @include responsivo('mobile') {
     .header.is-open {
