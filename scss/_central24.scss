@@ -27,6 +27,10 @@
                 width: 220px;
                 padding: 16px;
 
+                @include responsivo('mobile') {
+                    display: none;
+                }
+
                 p {
                     font-size: 14px;
                 }
