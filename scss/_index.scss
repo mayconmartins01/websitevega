@@ -926,12 +926,24 @@
         position: absolute;
         bottom: 0;
         right: 0;
+
+        //.img-vega
+        @include responsivo ('laptop') {
+          width: 50%;
+        }
+
+        //.img-vega
+        @include responsivo ('mobile') {
+          width: 20%;
+        }
       }
     }
   }
 }
 
-@include responsivo ('laptop') {
+
+
+/* @include responsivo ('laptop') {
   .s-contact {
     .container {
       .contact {
@@ -941,4 +953,4 @@
       }
     }
   }
-}
+} */
