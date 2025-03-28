@@ -9,6 +9,7 @@
         width: 100%;
         position: relative;
 
+        //.header__container 
         @include responsivo('mobile') {
             display: none;
         }
@@ -69,7 +70,6 @@
         }
     }
 
-
     &__logo {
         img {
             display: block;
@@ -83,7 +83,6 @@
 // MENU MOBILE //
 .mobile-menu {
     width: 100%;
-    max-width: 100%;
     height: max-content;
     position: fixed;
     top: 0;
@@ -95,34 +94,41 @@
     background-color: #fff;
 
     .mobile-menu__header {
-        width: 100%;
-        max-width: 100%;
+        min-width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         padding: $spacing-md;
-    }
+        z-index: 4;
 
-    .mobile-menu__logo {
-        z-index: 3;
-
-        img {
+        //.mobile-menu__header
+        @include responsivo('mobile') {
+            width: max-content;
+            display: flex;
             display: block;
-            width: auto;
-            height: auto;
-            max-width: 100%;
         }
-    }
 
-    #menu-toggle {
-        position: absolute;
-        top: $spacing-md;
-        right: $spacing-md;
-        z-index: $z-index-high + 1;
-        cursor: pointer;
-        width: 30px;
-        height: 20px;
-        transition: opacity $transition-default;
+        .mobile-menu__logo {
+            z-index: 5;
+
+            img {
+                display: block;
+                width: auto;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        #menu-toggle {
+            position: absolute;
+            top: $spacing-md;
+            right: $spacing-md;
+            z-index: $z-index-high + 1;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            transition: opacity $transition-default;
+        }
     }
 
     .mobile-menu__nav {
@@ -132,13 +138,29 @@
         justify-content: flex-end;
         align-items: center;
         gap: 20px;
-        width: 412px;
-        height: 100vh;
+        /*         width: 100%;
+        max-width: 100%; */
+        /*         height: 100vh !important;
+        min-height: 100vh; */
         position: absolute;
+        top: 0;
         right: 0;
         padding: 100px 16px 16px;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         z-index: 2;
+
+        //.mobile-menu__nav
+        @include responsivo('mobile') {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            padding: 16px;
+            position: absolute;
+            top: 0;
+            /* padding-top: 80px; */
+            padding: 100px 16px 16px;
+            gap: 24px;
+        }
 
         .header__menu-mobile {
             width: 100%;
@@ -157,8 +179,9 @@
             text-decoration: none;
             transition: transform 1s ease-in-out, opacity 0.3s ease-in-out;
 
-            @include responsivo('tablet') {
-                padding-right: $spacing-xs;
+            //.mobile-menu__nav-link 
+            @include responsivo('mobile') {
+                padding: 5%;
             }
         }
 
@@ -185,30 +208,75 @@
             line-height: $line-height-default;
             text-align: center;
             text-decoration: none;
+
         }
     }
 }
 
+//#mobile-menu
 @include responsivo('mobile') {
+    #mobile-menu {
+        display: flex;
+        z-index: 3;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+//.header.is-open // Mostra a navegação quando o toggle é clicado
+@include responsivo('mobile') {
+    .header.is-open {
+        #mobile-menu {
+            .mobile-menu__nav {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @include responsivo('mobile') {
     .header__container {
         display: none;
     }
 
     #mobile-menu {
         display: flex;
-        width: 100%;
-        max-width: 100%;
         z-index: 3;
         justify-content: center;
 
+        width: 100%;
+
+
         .mobile-menu__header {
+            width: max-content;
             display: flex;
+            display: block;
+
         }
 
         .mobile-menu__nav {
             display: none;
             width: 100%;
-            max-width: 100%;
             padding: 16px;
             position: absolute;
             top: 0;
@@ -228,4 +296,4 @@
             }
         }
     }
-}
+} */
