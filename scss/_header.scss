@@ -152,7 +152,8 @@
         width: 100%;
         max-width: 100%;
         height: 100vh !important;
-        min-height: 100vh;
+        min-height: 100vh !important;
+        ;
         position: absolute;
         top: 0;
         right: 0;
@@ -174,7 +175,7 @@
 
         .header__menu-mobile {
             width: 100%;
-            padding-top: 150px;
+            padding: 150px 0 32px;
         }
 
         .mobile-menu__nav-link {
