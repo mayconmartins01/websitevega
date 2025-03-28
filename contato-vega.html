@@ -33,15 +33,42 @@
 
                 <div class="header__menu">
                     <a href="https://areavip.fullcontrol.com.br/vegasat" class="header__menu-link"
-                        target="_blank">EMISSÃO DE
-                        BOLETOS</a>
+                        target="_blank">EMISSÃO DE BOLETOS</a>
                     <div class="header__login">
                         <img src="./img/icon-login.svg" alt="Login Icon" class="header__login-icon" />
                         <a href="#login" class="header__login-link">LOGIN</a>
-
-                        <!-- <a href="./contato-vega.html" class="btn btn--sm">CONTATO</a> -->
+                        <a href="./contato-vega.html" class="btn btn--sm">CONTATO</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu__header">
+                    <div class="mobile-menu__logo">
+                        <a href="./index.html">
+                            <img id="mobile-logo" src="./img/logo-header.svg" alt="Logo" />
+                        </a>
+                    </div>
+                    <img id="menu-toggle" src="./img/menu-mobile.svg" alt="Menu Toggle Icon" class="menu-icon" />
+                </div>
+                <nav class="mobile-menu__nav">
+                    <a href="./projetos-especiais.html" class="mobile-menu__nav-link">PROJETOS ESPECIAIS</a>
+                    <a href="./vega-view.html" class="mobile-menu__nav-link">VEGA VIEW</a>
+                    <a href="./central24h.html" class="mobile-menu__nav-link">CENTRAL 24H</a>
+                    <div class="header__menu-mobile">
+                        <a href="https://areavip.fullcontrol.com.br/vegasat" class="mobile-menu__nav-link"
+                            target="_blank">EMISSÃO
+                            DE
+                            BOLETOS</a>
+                        <a href="#login" class="mobile-menu__nav-link">
+                            <img src="./img/icon-login.svg" alt="Login Icon" class="mobile-menu__login-icon" />
+                            LOGIN
+                        </a>
+
+                        <a href="./contato-vega.html" class="mobile-menu__nav-link mobile-menu__nav-btn">CONTATO</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -50,13 +77,11 @@
             <div class="wrapper-contact">
                 <div class="content-list-cntc">
                     <h1>Contato</h1>
-
                     <p class="text-base neutral-700 p-info-list">Desde 2012, a Vega garante proteção avançada para os
                         mais diversos
                         veículos, frotas e itens de
                         alto
                         valor.</p>
-
                     <div class="wrapper-list">
                         <div class="cntc-list">
                             <img src="./img/icon-check.svg" alt="Check Icone">
@@ -151,10 +176,12 @@
         <div class="container">
             <div class="content-footer">
                 <div class="imgs-footer">
-                    <a href="./index.html">
-                        <img class="logo-footer" src="./img/logo-footer.svg" alt="">
-                    </a>
-                    <img src="./img/line-star-footer.svg" alt="">
+                    <div class="box-logo-footer">
+                        <a href="./index.html">
+                            <img class="logo-footer" src="./img/logo-footer.svg" alt="">
+                        </a>
+                    </div>
+                    <img class="line-footer" src="./img/line-star-footer.svg" alt="">
                 </div>
                 <div class="social">
                     <a href="">
@@ -193,7 +220,9 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
+<script src="./js/js/main.js"></script>
+<script src="./js/js/menu-mobile.js"></script>
+<script>document.getElementById("ano").textContent = new Date().getFullYear();</script>

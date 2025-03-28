@@ -5,6 +5,11 @@
     height: 953px;
     margin-top: -88px;
 
+    @include responsivo ('mobile') {
+        margin-top: 42px;
+        height: max-content;
+    }
+
     .container {
         width: 100%;
         height: 100%;
@@ -14,12 +19,37 @@
         background-repeat: no-repeat;
         @include flex-center;
 
+        @include responsivo ('laptop') {
+            background-image: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            height: max-content;
+        }
+
+        @include responsivo ('mobile') {
+            flex-wrap: wrap;
+            height: max-content;
+        }
+
         .wrapper-contact {
             width: 490px;
             height: 685px;
             @include flex-column;
             justify-content: space-between;
             padding: 24.5px 58px 31.5px 40px;
+
+            @include responsivo ('laptop') {
+                outline: .1px solid $neutral-100;
+                width: max-content;
+                padding: 16px;
+            }
+
+            @include responsivo ('mobile') {
+                outline: none;
+                width: 100%;
+                height: max-content;
+            }
 
             .content-list-cntc {
                 width: max-content;
@@ -53,6 +83,10 @@
                     background: $neutral-900;
                     @include flex-center;
                 }
+
+                @include responsivo ('mobile') {
+                    padding: 48px 0 44px;
+                }
             }
         }
 
@@ -61,6 +95,22 @@
             height: 683px;
             @include flex-column;
             padding: $spacing-xl 40px;
+
+            @include responsivo ('laptop') {
+                outline: .1px solid $neutral-100;
+                width: max-content;
+                height: max-content;
+                padding: 16px;
+            }
+
+            @include responsivo ('mobile') {
+                outline: none;
+                height: max-content;
+                width: 100%;
+                border-top: .1px solid $neutral-200;
+                border-bottom: .1px solid $neutral-200;
+                margin-bottom: 120px;
+            }
 
             form {
                 @include flex-column;
@@ -82,6 +132,16 @@
                         width: 559px !important;
                         height: 120px !important;
                         padding: 10px $spacing-md 89px;
+
+                        @include responsivo ('laptop') {
+                            min-width: 400px !important;
+                            width: 100% !important;
+                        }
+                    }
+
+                    @include responsivo ('laptop') {
+                        min-width: 400px !important;
+                        width: 100% !important;
                     }
                 }
 

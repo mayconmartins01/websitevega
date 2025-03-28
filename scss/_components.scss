@@ -131,16 +131,53 @@
     .content-footer {
       .imgs-footer {
         @include flex-space-between;
+        display: flex;
+        justify-content: space-between;
+
         align-items: flex-start;
 
-        .logo-footer {
-          padding: 6px 0 0 0;
+        .box-logo-footer {
+          min-width: 120px !important;
+          height: max-content;
+          padding: 6px 8px 0 0;
+
+          @include responsivo ('mobile') {
+           margin: 0 auto;
+          }
+
+          .logo-footer {
+            width: 100%;
+          }
         }
+
+        .line-footer {
+          width: 100%;
+          min-width: 80%;
+          min-height: 100%;
+
+          @include responsivo ('tablet') {
+            padding-top: 8px;
+          }
+
+          @include responsivo ('mobile') {
+            display: none;
+          }
+        }
+      }
+
+      //.content-footer
+      @include responsivo ('tablet') {
+        text-align: center;
       }
 
       .social {
         @include flex-row;
         @include spacing($padding: $spacing-md 0 0 0, $gap: $spacing-md);
+
+        //.social
+        @include responsivo ('tablet') {
+          justify-content: center;
+        }
       }
 
       .text-footer {
@@ -148,6 +185,11 @@
           color: $neutral-25;
           max-width: 223px;
           padding-top: $spacing-lg;
+
+          //.text-footer p
+          @include responsivo ('tablet') {
+            margin: 0 auto;
+          }
         }
       }
 
@@ -156,6 +198,12 @@
         padding-top: $spacing-giga;
         padding-bottom: $spacing-md;
         border-bottom: 2px solid $neutral-700;
+
+        //.text-contatos
+        @include responsivo ('tablet') {
+          @include flex-column;
+          align-items: center
+        }
 
         .tel {
           @include flex-row;
@@ -177,6 +225,12 @@
         @include flex-space-between;
         padding-top: $spacing-md;
 
+        //.assinatura 
+        @include responsivo ('tablet') {
+          @include flex-column;
+          align-items: center;
+        }
+
         .text-direitos {
           color: $neutral-25;
         }
@@ -191,7 +245,22 @@
   }
 }
 
-@include responsivo ('tablet') {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @include responsivo ('tablet') {
   .f-footer {
     .container {
 
@@ -218,7 +287,7 @@
       }
     }
   }
-}
+} */
 
 
 

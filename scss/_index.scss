@@ -662,6 +662,10 @@
           background-position: center;
           background-repeat: no-repeat;
 
+          @include responsivo('laptop') {
+            height: max-content
+          }
+
           .tdesc-card1 {
             ul {
               display: flex;
@@ -708,11 +712,6 @@
               }
             }
           }
-
-          @include responsivo('mobile') {
-            height: max-content
-          }
-
         }
       }
     }

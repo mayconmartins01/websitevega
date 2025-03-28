@@ -137,6 +137,7 @@
         @include responsivo('mobile') {
             .box-sobre-proj_esp.box-proj {
                 padding: 120px 16px;
+                margin-bottom: 120px;
                 display: flex;
                 flex-direction: column;
             }
