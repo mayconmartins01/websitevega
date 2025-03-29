@@ -126,7 +126,7 @@
 .f-footer {
   background-color: $pri-950;
   padding-top: 54px;
-  padding-bottom: $spacing-xl;
+  padding-bottom: 32px;
 
   .container {
     .content-footer {
@@ -173,9 +173,9 @@
 
       .social {
         @include flex-row;
-        @include spacing($padding: $spacing-md 0 0 0, $gap: $spacing-md);
+        padding: 16px 0 0 0;
+        gap: 16px;
 
-        //.social
         @include responsivo ('tablet') {
           justify-content: center;
         }
@@ -185,7 +185,7 @@
         p {
           color: $neutral-25;
           max-width: 223px;
-          padding-top: $spacing-lg;
+          padding-top: 24px;
 
           //.text-footer p
           @include responsivo ('tablet') {
@@ -196,8 +196,8 @@
 
       .text-contatos {
         @include flex-space-between;
-        padding-top: $spacing-giga;
-        padding-bottom: $spacing-md;
+        padding-top: 120px;
+        padding-bottom: 16px;
         border-bottom: 2px solid $neutral-700;
 
         //.text-contatos
@@ -208,7 +208,7 @@
 
         .tel {
           @include flex-row;
-          @include spacing($gap: $spacing-xs);
+          gap: 8px;
 
           a {
             color: $neutral-25;
@@ -224,7 +224,7 @@
 
       .assinatura {
         @include flex-space-between;
-        padding-top: $spacing-md;
+        padding-top: 16px;
 
         //.assinatura 
         @include responsivo ('tablet') {

@@ -278,6 +278,10 @@
     p {
       max-width: 36.2rem;
       padding-top: 24px;
+
+      @include responsivo ('mobile') {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -487,6 +491,10 @@
       .solutions__highlights {
         height: auto;
 
+        @include responsivo('ultra') {
+          margin-top: 24px;
+        }
+
         p {
           color: $neutral-700;
 
@@ -616,7 +624,7 @@
         gap: 20px 0;
 
         // .line-top 
-        @include responsivo('laptop') {
+        @include responsivo('ultra') {
           display: flex;
           justify-content: space-evenly;
           align-items: center;
@@ -672,6 +680,10 @@
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
+
+          @include responsivo('mobile') {
+            min-height: 341px;
+          }
         }
 
         .card2 {
@@ -679,6 +691,10 @@
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
+
+          @include responsivo('mobile') {
+            min-height: 341px;
+          }
         }
 
         .card3 {
@@ -686,6 +702,10 @@
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
+
+          @include responsivo('mobile') {
+            min-height: 341px;
+          }
 
           .tdesc-card1 {
             h4 {
@@ -698,14 +718,20 @@
       .line-bottom {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
         gap: 20px 0;
 
-        // ..line-bottom
+        @include responsivo('ultra') {
+          align-items: flex-start;
+          gap: 16px;
+        }
+
         @include responsivo('laptop') {
           display: flex;
           justify-content: space-evenly;
-          align-items: center;
+        }
+
+        @include responsivo('tablet') {
+          flex-wrap: wrap;
         }
 
         .card4,
@@ -716,6 +742,11 @@
           justify-content: space-between;
           padding: 24px 0 24px 24px;
           height: 323px;
+
+          @include responsivo('ultra') {
+            width: 100%;
+            height: 341px;
+          }
 
           @include responsivo('mobile') {
             width: 100%;
@@ -762,8 +793,15 @@
           height: 323px;
           background-color: #262D35;
           padding: 20px;
+          justify-content: space-between;
+
+          @include responsivo('ultra') {
+            gap: 52px;
+            height: max-content;
+          }
 
           @include responsivo('mobile') {
+            height: 341px;
             height: max-content;
           }
 
@@ -787,53 +825,53 @@
           background-position: center;
           background-repeat: no-repeat;
 
-          @include responsivo('laptop') {
+          @include responsivo('ultra') {
             height: max-content
           }
+        }
 
-          .tdesc-card1 {
-            ul {
+        .tdesc-card1 {
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            padding-bottom: 24px;
+
+            li {
+              color: $neutral-400;
               display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              gap: 12px;
-              padding-bottom: 24px;
+              flex-direction: row;
+              gap: 16px;
+              align-items: center;
+              height: max-content;
 
-              li {
-                color: $neutral-400;
+              span {
+                color: rgba(37, 44, 55, 0.8);
+                border-radius: 3px;
+                border: 1px solid #41B72F;
+                background: $acc-500;
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25) inset;
+                width: 56px;
+                height: 24px;
+                padding: 0 6px;
                 display: flex;
-                flex-direction: row;
-                gap: 16px;
+                justify-content: center;
                 align-items: center;
-                height: max-content;
 
-                span {
-                  color: rgba(37, 44, 55, 0.8);
-                  border-radius: 3px;
-                  border: 1px solid #41B72F;
-                  background: $acc-500;
-                  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25) inset;
-                  width: 56px;
-                  height: 24px;
-                  padding: 0 6px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+              }
 
-                }
+              @include responsivo('mobile') {
+                align-items: flex-start;
+              }
+
+              p {
+                max-width: max-content;
 
                 @include responsivo('mobile') {
-                  align-items: flex-start;
+                  width: 80%;
                 }
 
-                p {
-                  max-width: max-content;
-
-                  @include responsivo('mobile') {
-                    width: 80%;
-                  }
-
-                }
               }
             }
           }
@@ -842,6 +880,7 @@
     }
   }
 }
+
 
 .s-central24h {
   padding: 120px 0 154px 0;

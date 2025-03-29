@@ -9,7 +9,7 @@
                 left: 0;
                 width: max-content;
                 height: max-content;
-                padding: $spacing-lg;
+                padding: 24px;
 
                 p {
                     width: 438px;
@@ -104,7 +104,8 @@
                 .btn-content {
                     width: 432px;
                     @include flex-row;
-                    @include spacing($padding: $spacing-xxs, $gap: $spacing-xs);
+                    padding: 4px;
+                    gap: 8px;
                     align-self: stretch;
 
                     @include responsivo('mobile') {
@@ -113,7 +114,7 @@
 
                     .btn-select {
                         @include flex-center;
-                        padding: $spacing-xxs $spacing-xs;
+                        padding: 4px 8px;
                         gap: 10px;
                         flex: 1 0 0;
                         background: $neutral-50;
@@ -156,7 +157,7 @@
 
                 .header-info {
                     @include flex-column;
-                    @include spacing($gap: $spacing-xs);
+                    gap: 8px;
 
                     .title-info {
                         @include typography($font-size-md, $font-weight-medium, $line-height-default, -0.27px);
@@ -169,11 +170,11 @@
 
                 .wrapper-topic {
                     @include flex-column;
-                    @include spacing($gap: $spacing-sm);
+                    gap: 12px;
 
                     .topic {
                         @include flex-center;
-                        gap: $spacing-sm;
+                        gap: 12px;
 
                         p {
                             @include typography($font-size-md, $font-weight-regular, $line-height-default, -0.27px);

@@ -11,7 +11,7 @@
                 height: max-content;
 
                 p {
-                    padding-top: $spacing-sm;
+                    padding-top: 12px;
                     width: 495px;
                     @include typography($font-size-md);
 
@@ -48,7 +48,7 @@
                 top: 0;
                 left: 0;
                 @include flex-center;
-                padding: $spacing-lg;
+                padding: 24px;
                 gap: 10px;
 
                 @include responsivo ('mobile') {
@@ -188,7 +188,7 @@
                 }
 
                 p {
-                    padding-left: $spacing-xs;
+                    padding-left: 8px;
                     border-left: 1px solid $acc-500;
                 }
             }
@@ -240,7 +240,7 @@
 
                 h4 {
                     @include typography($font-size-lg, $font-weight-medium, $line-height-default, -0.3px);
-                    padding-bottom: $spacing-sm;
+                    padding-bottom: 12px;
                 }
 
                 p {
@@ -312,7 +312,7 @@
 
                 .btn-orc {
                     @include flex-center;
-                    @include spacing($gap: $spacing-xxs);
+                    gap: 4px;
                     min-width: 244px;
 
                     @include responsivo('tablet') {
@@ -398,12 +398,12 @@
     .container {
         width: 100%;
         height: 100%;
-        padding: $spacing-giga 0;
+        padding: 120px 0;
 
         .header-suport {
             p {
                 @include typography($font-size-base, $font-weight-regular, $line-height-default, -0.24px);
-                padding-bottom: $spacing-xs;
+                padding-bottom: 8px;
             }
 
             h2 {
@@ -442,7 +442,6 @@
             height: 613px;
             @include flex-space-between;
             align-content: space-between;
-            /* border: 3px solid #ff0000; */
 
             @include responsivo('mobile') {
                 height: max-content;
@@ -453,7 +452,6 @@
                 @include flex-column;
                 @include flex-space-between-start;
                 padding: 0 16px;
-                /* border: 3px solid #0000ff; */
 
                 @include responsivo('mobile') {
                     width: 100%;
@@ -465,8 +463,7 @@
                     height: 500px;
                     @include flex-column;
                     @include flex-space-between;
-                    gap: $spacing-xxs;
-                    /* border: 3px solid #008000; */
+                    gap: 4px;
 
                     @include responsivo('ultra') {
                         width: max-content;
@@ -475,7 +472,6 @@
 
                     @include responsivo('mobile') {
                         width: 100%;
-
                     }
 
                     .suport-item {
@@ -484,7 +480,6 @@
                         @include flex-center;
                         justify-content: flex-start;
                         border-top: 1px solid $neutral-900;
-                        /* background-color: blueviolet; */
 
                         @include responsivo('mobile') {
                             width: 100%;
@@ -495,8 +490,7 @@
                             width: 375px;
                             height: auto;
                             @include flex-start;
-                            gap: $spacing-lg;
-                            /*  background-color: yellow; */
+                            gap: 24px;
 
                             h4 {
                                 @include typography($font-size-lg, $font-weight-medium, $line-height-default, -0.3px);

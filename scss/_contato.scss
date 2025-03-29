@@ -54,7 +54,7 @@
             .content-list-cntc {
                 width: max-content;
                 @include flex-column;
-                @include spacing($gap: $spacing-md);
+                gap: 16px;
 
                 .p-info-list {
                     width: 406px;
@@ -62,24 +62,24 @@
 
                 .wrapper-list {
                     @include flex-column;
-                    @include spacing($gap: $spacing-sm);
+                    gap: 12px;
                 }
 
                 .cntc-list {
                     width: 100%;
                     @include flex-row;
-                    @include spacing($gap: 13px);
+                    gap: 13px;
                 }
             }
 
             .info-contact {
                 width: 303px;
                 @include flex-column;
-                @include spacing($gap: $spacing-md);
+                gap: 16px;
 
                 .box-email {
-                    width: $spacing-lg;
-                    height: $spacing-lg;
+                    width: 24px;
+                    height: 24px;
                     background: $neutral-900;
                     @include flex-center;
                 }
@@ -94,7 +94,7 @@
             width: 640px;
             height: 683px;
             @include flex-column;
-            padding: $spacing-xl 40px;
+            padding: 24px 40px;
 
             @include responsivo ('laptop') {
                 outline: .1px solid $neutral-100;
@@ -114,15 +114,16 @@
 
             form {
                 @include flex-column;
-                @include spacing($gap: $spacing-gap-form);
+                gap: 21px;
 
                 .form-group {
                     @include flex-column;
-                    @include spacing($gap: $spacing-xs);
+                    gap: 8px;
+
 
                     input {
                         display: flex;
-                        padding: 10px $spacing-md 9px;
+                        padding: 10px 16px 9px;
                         align-items: center;
                         align-self: stretch;
                         border: 1px solid $neutral-200;
@@ -131,7 +132,7 @@
                     .msn-area {
                         width: 559px !important;
                         height: 120px !important;
-                        padding: 10px $spacing-md 89px;
+                        padding: 10px 16px 89px;
 
                         @include responsivo ('laptop') {
                             min-width: 400px !important;
@@ -147,7 +148,7 @@
 
                 .checkbox {
                     @include flex-row;
-                    @include spacing($gap: 13px);
+                    gap: 13px;
 
                     .Terms-use,
                     .privacy-police {
